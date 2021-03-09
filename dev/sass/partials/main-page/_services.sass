@@ -1,0 +1,92 @@
+.services
+  &__wrapper
+    padding: 40px 20px
+    @include media-breakpoint-up(md)
+      padding: 50px 0
+    @include media-breakpoint-up(xl)
+      padding: 76px 0 82px
+  &__content
+    @include media-breakpoint-up(md)
+      display: flex
+      margin-left: -9px
+    @include media-breakpoint-up(xl)
+      margin-left: -15px
+    .service
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-start
+      width: 280px
+      height: 200px
+      margin-left: auto
+      margin-right: auto
+      @include media-breakpoint-up(md)
+        justify-content: space-between
+        align-items: center
+        width: 50%
+        height: 375px
+        padding: 16px 10px 45px
+        margin-left: 9px
+        margin-right: 9px
+        @include media-breakpoint-up(xl)
+          width: 33,333%
+          height: 451px
+          margin-left: 15px
+          margin-right: 15px
+      &__watch
+        display: none
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 60%,$white 100%), url(../../img/bg-services-watch.png) no-repeat
+        background-size: cover
+        @include media-breakpoint-up(xl)
+          display: flex
+        .service__img-wrapper
+          @include media-breakpoint-up(xl)
+            width: 303px
+      &__jewelry
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 60%,$white 100%), url(../../img/bg-services-jewelry.png) no-repeat
+        background-size: cover
+        background-position-y: 100%
+        margin-bottom: 20px
+        @include media-breakpoint-up(md)
+          background-position-y: inherit
+          margin-bottom: 0
+        .service__img-wrapper
+          width: 120px
+          @include media-breakpoint-up(md)
+            width: 194px
+          @include media-breakpoint-up(xl)
+            width: 246px
+      &__coins
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 60%,$white 100%), url(../../img/bg-services-coins.png) no-repeat
+        background-size: cover
+        background-position-y: 100%
+        @include media-breakpoint-up(md)
+          background-position-y: inherit
+        .service__img-wrapper
+          width: 104px
+          @include media-breakpoint-up(md)
+            width: 187px
+          @include media-breakpoint-up(xl)
+            width: 238px
+      &__heading
+        &-wrapper
+          text-align: center
+          max-width: 135px
+          margin-bottom: 16px
+      &__subheading
+        @include media-breakpoint-up(md)
+          letter-spacing: .05em
+          font-size: 21px
+          line-height: 31px
+      &__img
+        width: 100%
+        &-wrapper
+          @include media-breakpoint-down(sm)
+            position: absolute
+            top: 50%
+            right: 8px
+            transform: translateY(-50%)
+      .btn
+        @include media-breakpoint-down(sm)
+          margin-left: 20px

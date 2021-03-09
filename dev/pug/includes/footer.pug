@@ -1,0 +1,52 @@
+include ../mixins/list
+
+-
+	const social = [
+		{icon: 'facebook', url: '/'},
+		{icon: 'twitter', url: '/'},
+		{icon: 'vk', url: '/'},
+		{icon: 'youtube', url: '/'},
+		{icon: 'instagram', url: '/'}
+	]
+	const info_links = [
+		{title: 'Как купить часы?', link: '/'},
+		{title: 'Как продать часы?', link: '/'},
+		{title: 'Конфеденциальность', link: '/'}
+	]
+	const main_links = [
+		{title: 'Главная', link: '/'},
+		{title: 'Купить', link: '/'},
+		{title: 'Продать', link: '/'},
+		{title: 'Заложить', link: '/'},
+		{title: 'О нас', link: '/'}
+	]
+	const expertise_links = [
+		{title: 'Блог', link: '/'},
+		{title: 'Youtube', link: '/'},
+		{title: 'Instagram', link: '/'}
+	]
+
+section.footer
+	.footer__wrapper
+		.container
+			.footer__content
+				.left-side
+					.social-list
+						each item in social
+							.social-item
+								a(class='social-link ' + item.icon  href=item.url)
+									img.img(src="../img/" + item.icon + ".svg", alt="icon")
+
+					.copyright.text-s &copy; 2007 Циферблат
+				.right-side
+					.wrapper-main
+						h6.footer-heading Циферблат
+						+list(main_links, 'list', 'item', true, 'link')
+					.wrapper-expertise
+						h6.footer-heading Экспертиза
+						+list(expertise_links, 'list', 'item', true, 'link')
+					.wrapper-info
+						h6.footer-heading Полезная информация
+						+list(info_links, 'list', 'item', true, 'link')
+
+

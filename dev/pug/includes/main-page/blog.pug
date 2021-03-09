@@ -1,0 +1,23 @@
+-
+	const articles = [
+		{title: 'Детальный разбор', link: 'Виды ювелирной огранки', url: '/'},
+		{title: 'Руководство по эксплуатации', link: 'Водонепроницаемы ли часы Rolex?', url: '/'},
+		{title: 'Внутри Киноиндустрии', link: 'Лучшие часы, которые носят кинозвезды', url: '/'}
+	]
+
+section.blog
+	.blog__wrapper
+		.container
+			h2.blog__heading Экспертиза часового и ювелирного рынка
+			.blog__content
+				.articles
+					each item, index in articles
+						.article(class= 'article-' + (index + 1))
+							img.img(src='../../img/article-' + (index + 1) + '.png', alt="img")
+							h6.normal.category #{title}
+							h4.no-uppercase.heading
+								a(href=item.url) #{link}
+				.link-wrapper
+					a.link(href="/") Все записи
+
+

@@ -1,0 +1,98 @@
+.best-deals
+  &__wrapper
+    padding: 0 20px 50px
+    @include media-breakpoint-up(md)
+      padding: 50px 0
+    @include media-breakpoint-up(xl)
+      padding: 0 0 76px
+  &__content
+    .tabs
+      display: none
+      @include media-breakpoint-up(xl)
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    .tab
+      letter-spacing: .01em
+      font-size: 21px
+      line-height: 26px
+      cursor: pointer
+      margin-left: 40px
+      margin-right: 40px
+      margin-bottom: 80px
+      &.active
+        border-bottom: 1px solid $black
+      &-content
+        display: none
+        &.active
+          display: block
+          width: 100%
+          text-align: center
+    .slider
+      &-wrapper
+        .heading
+          text-align: center
+          margin-bottom: 25px
+          @include media-breakpoint-up(mb)
+            margin-bottom: 40px
+      &-best-deals
+        max-width: calc(100% - 72px)
+        margin-left: auto
+        margin-right: auto
+        .slide
+          display: flex
+          flex-direction: column
+          align-items: center
+          @include media-breakpoint-up(xl)
+            margin-left: 55px
+            margin-right: 55px
+          @include media-breakpoint-up(xxl)
+            margin-left: 62px
+            margin-right: 62px
+          .img
+            width: 100%
+            &-wrapper
+              position: relative
+              width: 188px
+              margin-bottom: 36px
+              @include media-breakpoint-up(md)
+                width: 217px
+              .icon
+                position: absolute
+                width: 40px
+                height: 40px
+                &-like
+                  right: 0
+                  bottom: 0
+                &-percent
+                  top: 0
+                  right: 0
+          .model
+            color: $black50
+            margin-bottom: 20px
+          .price
+            display: flex
+            letter-spacing: .01em
+            font-size: 21px
+            line-height: 31px
+            font-weight: bold
+            color: $blue
+            margin-top: auto
+    .prev
+      left: -36px
+    .next
+      right: -36px
+    .slick-dots
+      bottom: -45px
+      li
+        width: 15px
+        height: 15px
+        button:before
+          font-size: 10px
+        &.slick-active
+          button:before
+            color: $yellow
+
+    .tablet-down
+      @include media-breakpoint-up(xl)
+        display: none

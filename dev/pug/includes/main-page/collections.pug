@@ -1,0 +1,15 @@
+include ../../mixins/list
+
+-
+	const collections = [
+		{title: 'Новые поступления', link: '/'},
+		{title: 'Часы до 5000$', link: '/'},
+		{title: 'Украшения', link: '/'}
+	]
+
+section.collections
+	.collections__wrapper
+		.container
+			h4.collections__heading.no-uppercase В нашей роскошной коллекции
+			.collections__content
+				+list(collections, 'collections__list', 'collections__item', true, 'collections__link')

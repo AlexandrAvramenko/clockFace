@@ -1,0 +1,38 @@
+// Breakpoint sizes
+$screen-md-min: 768px // col-40 gap-18 col-10-562px
+$screen-xl-min: 1440px // col-82 gap-30 col-10-1096px col-8-866px
+$screen-xxl-min: 1920px // col-99 gap-30 col-10-1260px col-8-1002px
+
+// @include media-breakpoint-up(md)
+// @include media-breakpoint-up(xl)
+// @include media-breakpoint-up(xxl)
+
+$screen-sm-max: 767.98px
+$screen-lg-max: 1439.98px
+$screen-xl-max: 1919.98px
+
+// @include media-breakpoint-down(sm)
+// @include media-breakpoint-down(lg)
+// @include media-breakpoint-down(xl)
+
+@mixin media-breakpoint-up($media)
+	@if $media == md
+		@media (min-width: $screen-md-min)
+			@content
+	@else if $media == xl
+		@media (min-width: $screen-xl-min)
+			@content
+	@else if $media == xxl
+		@media (min-width: $screen-xxl-min)
+			@content
+
+@mixin media-breakpoint-down($media)
+	@if $media == sm
+		@media (max-width: $screen-sm-max)
+			@content
+	@else if $media == lg
+		@media (max-width: $screen-lg-max)
+			@content
+	@else if $media == xl
+		@media (max-width: $screen-xl-max)
+			@content

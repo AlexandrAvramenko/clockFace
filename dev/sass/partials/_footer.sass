@@ -1,0 +1,98 @@
+.footer
+  &__wrapper
+    padding: 40px 20px
+    @include media-breakpoint-up(md)
+      padding: 50px 0
+    @include media-breakpoint-up(xl)
+      padding: 76px 0 82px
+  &__content
+    position: relative
+    display: flex
+
+    .left-side
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      @include media-breakpoint-down(sm)
+        width: 100%
+        height: 205px
+        align-items: center
+      @include media-breakpoint-up(md)
+        width: 50%
+        margin-right: 72px
+      @include media-breakpoint-up(xl)
+        width: auto
+        flex-grow: 1
+      .social
+        &-list
+          display: flex
+          justify-content: space-between
+          width: 280px
+        &-item
+          width: 26px
+          height: 26px
+          @include media-breakpoint-up(md)
+            width: 40px
+            height: 40px
+        &-link
+          .img
+            width: 100%
+            height: 100%
+      .copyright
+        color: $blue
+        @include media-breakpoint-down(sm)
+          font-size: 12px
+          line-height: 18px
+
+    .right-side
+      display: flex
+      @include media-breakpoint-up(md)
+        width: 50%
+        flex-wrap: wrap
+        @include media-breakpoint-up(xl)
+          width: 754px
+          flex-wrap: nowrap
+      .wrapper
+        &-main, &-expertise
+          @include media-breakpoint-down(sm)
+            display: none
+          @include media-breakpoint-up(md)
+            width: 50%
+            margin-bottom: 40px
+          @include media-breakpoint-up(xl)
+            width: 194px
+          @include media-breakpoint-up(xxl)
+            width: 228px
+        &-info
+          @include media-breakpoint-down(sm)
+            position: absolute
+            top: 50px
+            left: 50%
+            width: 100%
+            text-align: center
+            transform: translateX(-50%)
+          @include media-breakpoint-up(xl)
+            width: 306px
+          @include media-breakpoint-up(xxl)
+            width: 357px
+
+      .list
+        list-style: none
+        padding: 0
+        @include media-breakpoint-up(md)
+          margin-bottom: 0
+      .item
+        margin-bottom: 8px
+        @include media-breakpoint-up(md)
+          margin-bottom: 12px
+        &:last-child
+          margin-bottom: 0
+      .link
+        text-decoration: none
+        font-size: 12px
+        line-height: 18px
+        letter-spacing: .01em
+        color: $black50
+        @include media-breakpoint-up(md)
+          font-size: 17px
+          line-height: 25px

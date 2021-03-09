@@ -1,0 +1,126 @@
+include ../mixins/list
+include ../mixins/button
+
+-
+	const menu_list = [
+		{title: 'Купить', link: '/'},
+		{title: 'Продать', link: '/'},
+		{title: 'Заложить', link: '/'},
+		{title: 'О нас', link: '/'}
+	]
+	const buy_sale_pledge = [
+		{title: 'Часы', url: '/'},
+		{title: 'Ювелирные изделия', url: '/'},
+		{title: 'Бриллианты', url: '/'},
+		{title: 'Золотые монеты', url: '/'}
+	]
+	const aboutus_list = [
+		{title: 'Услуги', url: '/'},
+		{title: 'Сотрудничество', url: '/'},
+		{title: 'Почему мы', url: '/'},
+		{title: 'Аксессуары', url: '/'},
+		{title: 'Вопрос-Ответ', url: '/'},
+		{title: 'Отзывы', url: '/'}
+	]
+	const menu_small = [
+		{icon: 'sm-phone', url: '/'},
+		{icon: 'sm-whatsapp', url: '/'},
+		{icon: 'sm-telegram', url: '/'}
+		//- {icon: 'sm-search', url: '/'}
+	]
+	const mobile_list = [
+		{icon: 'mb-phone', url: '/'},
+		{icon: 'whatsapp', url: '/'},
+		{icon: 'telegram', url: '/'}
+	]
+
+section.header
+	.overlay
+	.header__wrapper
+		.container
+			.header__content
+				.header__logo-wrapper
+					.header__logo
+						img.img(src="../img/logo.svg", alt="img")
+					.header__logo-small
+						img(src="../img/logo-small.svg", alt="img")
+				.header__menu
+					.header__menu-left
+						+list(menu_list, 'list', 'item', true, 'link')
+					.header__menu-right
+						.list
+							.item.search
+								img(src="../img/search.svg", alt="icon")
+							.search-content
+								.container
+									.divider
+									.wrapper
+										input.input(type="text" placeholder="Поиск")
+										+button('btn-alt', 'Найти')
+										img.close__search-content(src="../../img/close.svg", alt="icon")
+							.item.number +7 999 999-88-88
+							.item.lang
+								a.link(href="/") EN
+							.item.login
+								a.link(href="/")
+									img(src="../img/login.svg", alt="icon")
+						+button('btn-primary btn-sm', 'Онлайн-оценка')
+				.header__menu-small
+					each item in menu_small
+						.social-item
+							a(class='mobile-link ' + item.icon  href=item.url)
+								img.img(src="../img/" + item.icon + ".svg", alt="icon")
+					.search
+							img(src="../img/sm-search.svg", alt="icon")
+					.search-content
+						.container
+							.divider
+							.wrapper
+								input.input(type="text" placeholder="Поиск")
+								+button('btn-alt', 'Найти')
+								img.close__search-content(src="../../img/close.svg", alt="icon")
+				.header__burger
+					img.burger(src="../../img/burger.svg", alt="icon")
+					img.close(src="../../img/close.svg", alt="icon")
+
+
+				.header__menu-mobile
+					.menu-mobile__left
+						.list
+							.item
+								.mobile-dropdown Купить
+									img.icon(src="../img/chevron.svg", alt="icon")
+								.mobile-dropdown__content
+									+list(buy_sale_pledge, 'list', 'item', true, 'link')
+							.item
+								.mobile-dropdown Продать
+									img.icon(src="../img/chevron.svg", alt="icon")
+								.mobile-dropdown__content
+									+list(buy_sale_pledge, 'list', 'item', true, 'link')
+							.item
+								.mobile-dropdown Заложить
+									img.icon(src="../img/chevron.svg", alt="icon")
+								.mobile-dropdown__content
+									+list(buy_sale_pledge, 'list', 'item', true, 'link')
+							.item
+								.mobile-dropdown О нас
+									img.icon(src="../img/chevron.svg", alt="icon")
+								.mobile-dropdown__content
+									+list(aboutus_list, 'list', 'item', true, 'link')
+					.menu-mobile__right
+						.list
+							.item.lang
+								a.link(href="/") EN
+							.item.login
+								a.link(href="/")
+									img.icon(src="../img/login.svg", alt="icon")
+									| Войти
+							.item.double
+								.number +7 999 999-88-88
+								.location С.-Петербург
+						.social-list
+							each item in mobile_list
+								.social-item
+									a(class='social-link ' + item.icon  href=item.url)
+										img.img(src="../img/" + item.icon + ".svg", alt="icon")
+

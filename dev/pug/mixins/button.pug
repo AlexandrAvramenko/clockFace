@@ -1,0 +1,5 @@
+mixin button(addClass, btnText, isDisabled, link, addLinkHref)
+	if link
+		a.btn(class=(isDisabled ? addClass + 'disabled' : addClass), href=addLinkHref) #{btnText}
+	else
+		button.btn(class=addClass, disabled=isDisabled, type='button',)&attributes(attributes) #{btnText}

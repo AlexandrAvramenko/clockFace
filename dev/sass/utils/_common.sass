@@ -1,0 +1,213 @@
+body
+	font-family: Proxima Nova, sans-serif
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+
+.text-l,.text-m,.text-s,.text-xs
+	&.medium
+		font-weight: 500
+	&.bold
+		font-weight: 700
+.text-l // T3
+	font-size: 20px
+	line-height: 28px
+	@include media-breakpoint-up(md)
+		font-size: 25px
+		line-height: 33px
+.text-m // T2
+	font-size: 16px
+	line-height: 25px
+	@include media-breakpoint-up(md)
+		font-size: 21px
+		line-height: 28px
+.text-s // T1
+	font-size: 14px
+	line-height: 22px
+	@include media-breakpoint-up(md)
+		font-size: 17px
+		line-height: 25px
+.text-xs // T4
+	font-size: 12px
+	line-height: 18px
+	@include media-breakpoint-up(md)
+		font-size: 13px
+		line-height: 23px
+
+// heading
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+	text-transform: uppercase
+	font-weight: 600
+	margin: 0
+	&.normal
+		font-weight: 400
+	&.no-uppercase
+		text-transform: none
+
+h1,.h1
+	font-size: 36px
+	line-height: 46px
+	letter-spacing: .05em
+	@include media-breakpoint-up(md)
+		font-size: 86px
+		line-height: 105px
+h2,.h2
+	font-size: 26px
+	line-height: 32px
+	letter-spacing: .05em
+	@include media-breakpoint-up(md)
+		font-size: 42px
+		line-height: 51px
+h3,.h3
+	font-size: 22px
+	line-height: 27px
+	letter-spacing: .05em
+	@include media-breakpoint-up(md)
+		font-size: 36px
+		line-height: 39px
+h4,.h4
+	font-size: 18px
+	line-height: 24px
+	letter-spacing: .01em
+	@include media-breakpoint-up(md)
+		font-size: 29px
+		line-height: 39px
+h5,.h5
+	font-size: 14px
+	line-height: 21px
+	font-weight: 700
+	letter-spacing: .01em
+	@include media-breakpoint-up(md)
+		font-size: 21px
+		line-height: 31px
+h6,.h6
+	font-size: 13px
+	line-height: 20px
+	letter-spacing: .08em
+	@include media-breakpoint-up(md)
+		font-size: 17px
+		line-height: 25px
+
+.container
+	width: 100%
+	margin-right: auto
+	margin-left: auto
+	@include media-breakpoint-up(md)
+		max-width: 678px
+	@include media-breakpoint-up(xl)
+		max-width: 1320px
+	@include media-breakpoint-up(xxl)
+		max-width: 1520px
+
+// input
+input
+	font-size: 16px
+	line-height: 25px
+	width: 100%
+	background-color: $white
+	border: 1px solid $blue35
+	border-radius: 3px
+	box-sizing: border-box
+	padding: 10px 16px
+	@include media-breakpoint-up(md)
+		font-size: 21px
+		line-height: 28px
+		padding: 17px 16px
+	&:hover, &:focus
+		border-color: $black
+		outline: none
+	&::placeholder
+		color: $black37
+
+p
+	margin-top: 0
+
+
+// // btn
+.btn
+	display: inline-block
+	font-size: 13px
+	line-height: 20px
+	letter-spacing: .05em
+	text-align: center
+	text-transform: uppercase
+	background-color: transparent
+	border: 1px solid transparent
+	border-radius: 3px
+	user-select: none
+	white-space: nowrap
+	transition: all .3s ease
+	padding: 7px 16px
+	@include media-breakpoint-up(md)
+		font-size: 17px
+		padding: 12px 40px
+	&:focus
+		outline: 0
+	&:disabled
+		pointer-events: none
+		cursor: default
+		opacity: .3
+	&-lg
+		font-size: 20px
+		line-height: 24px
+		padding: 12px 35px
+		@include media-breakpoint-up(md)
+			font-size: 22px
+			line-height: 26px
+			padding: 18px 51px
+	&-sm
+		font-size: 13px
+		line-height: 16px
+		padding: 11px 17px
+
+	&-primary
+		color: $black
+		background-color: $yellow
+		border-color: $yellow
+		&:hover,&:focus
+			border-color: $black
+			transition: .3s ease
+		&:disabled
+			color: $white
+			background-color: $black50
+			border-color: $black50
+
+	&-alt
+		color: $white
+		background-color: $blue
+		border-color: $blue
+		&:hover,&:focus
+			background-color: $black
+			border-color: $black
+			transition: .3s ease
+		&:disabled
+			color: $white
+			background-color: $black50
+			border-color: $black50
+
+	&-secondary
+		color: $black
+		background-color: $white
+		border-width: 2px
+		border-color: $yellow
+		&:hover,&:focus
+			border-color: $black
+			transition: .3s ease
+		&:disabled
+			border-color: $black50
+
+//rating-arrows
+.rating
+	display: inline-block
+	font-size: 0
+	margin-bottom: 10px
+	span
+		padding: 0
+		font-size: 20px
+		line-height: 1
+		color: $black23
+		&:before
+			content: '★'
+		&.active
+			color: $yellow
+
+

@@ -1,0 +1,21 @@
+include ../../mixins/button
+
+-
+	const services = [
+		{title: 'Выкуп часов', img: 'watch'},
+		{title: 'Выкуп', subtitle: 'ювелирных изделелий и бриллиантов', img: 'jewelry'},
+		{title: 'Выкуп монет', img: 'coins'}
+	]
+
+section.services
+	.services__wrapper
+		.container
+			.services__content
+				each item, index in services
+					.service(class="service__" + item.img)
+						.service__heading-wrapper
+							h3.service__heading.normal #{item.title}
+							h6.service__subheading.normal #{item.subtitle}
+						.service__img-wrapper
+							img.service__img(src="../../img/services-" + (item.img) + ".png", alt="img")
+						+button('btn-primary', 'Продать')

@@ -1,0 +1,13 @@
+include ../../mixins/button
+
+section.subscrition
+	.subscrition__wrapper
+		.container
+			.subscrition__content
+				h3.subscrition__heading.normal Любите часы, как их любим мы?
+				h5.subscrition__subheading.no-uppercase Подпишитесь на обновления ассортимента по вашему любимому бренду. Не более двух писем в месяц, мы уважаем ваше время.
+				form.subscrition__form(action="")
+					.subscrition__form-wrapper
+						input.subscrition__input(type="text", placeholder="Ваш e-mail")
+						+button('btn-primary', 'Подписаться')
+					.subscrition__info-text.text-xs * Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности

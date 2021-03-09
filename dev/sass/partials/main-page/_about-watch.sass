@@ -1,0 +1,48 @@
+.about-watch
+	&__wrapper
+		padding: 40px 20px
+		@include media-breakpoint-up(md)
+			padding: 50px 0
+		@include media-breakpoint-up(xl)
+			padding: 76px 0
+	&__heading
+		text-align: center
+		margin-bottom: 20px
+		@include media-breakpoint-up(md)
+			margin-bottom: 50px
+	&__content
+		margin-left: -15px
+		margin-right: -15px
+		@include media-breakpoint-up(xl)
+			display: flex
+		@include media-breakpoint-up(xxl)
+			margin-left: -24px
+			margin-right: -24px
+	.left-side, .right-side
+		margin-left: 15px
+		margin-right: 15px
+		@include media-breakpoint-up(xl)
+			width: 50%
+		@include media-breakpoint-up(xxl)
+			margin-left: 24px
+			margin-right: 24px
+		.img
+			width: 100%
+			height: 100%
+			max-height: 529px
+			object-fit: cover
+			margin-bottom: 20px
+			@include media-breakpoint-up(md)
+				margin-bottom: 30px
+			@include media-breakpoint-up(xl)
+				margin-bottom: 0
+		.notify
+			@include media-breakpoint-up(xl)
+				margin-bottom: 30px
+		.btn-wrapper
+			text-align: center
+			@include media-breakpoint-up(xl)
+				text-align: left
+	.right-side
+		@include media-breakpoint-up(xxl)
+			max-width: 660px

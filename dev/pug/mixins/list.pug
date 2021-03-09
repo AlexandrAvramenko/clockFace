@@ -1,0 +1,9 @@
+mixin list(data, ulClass, liClass, hasLink, linkClass)
+	ul(class=ulClass)
+		each val in data
+			li(class=liClass)
+				if hasLink
+					- const {title, link} = val
+					a(href=(link || val) class=linkClass)=(title || val)
+				else
+					=val

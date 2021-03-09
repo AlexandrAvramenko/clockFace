@@ -1,0 +1,65 @@
+.advantages
+  &__wrapper
+    padding: 40px 20px
+    @include media-breakpoint-up(md)
+      padding: 50px 0
+    @include media-breakpoint-up(xl)
+      padding: 76px 0 82px
+  &__heading
+    text-align: center
+    margin-bottom: 30px
+    @include media-breakpoint-up(md)
+      margin-bottom: 50px
+    @include media-breakpoint-up(xl)
+      margin-bottom: 65px
+  &__content
+    @include media-breakpoint-up(xl)
+      display: flex
+    .left-side
+      @include media-breakpoint-up(xl)
+        max-width: 866px
+      @include media-breakpoint-up(xxl)
+        max-width: 1002px
+      .list
+        @include media-breakpoint-up(md)
+          display: flex
+          flex-wrap: wrap
+          margin-left: -15px
+          margin-right: -15px
+      .item
+        text-align: center
+        margin-left: 15px
+        margin-right: 15px
+        margin-bottom: 20px
+        @include media-breakpoint-up(md)
+          width: calc(50% - 30px)
+          text-align: left
+        .heading
+          margin-bottom: 16px
+        .icon
+          width: 85px
+          height: 85px
+          fill: $yellow
+          margin-bottom: 10px
+    .right-side
+      margin-top: 44px
+      margin-left: calc((100vw - 100%) / -2)
+      margin-right: calc((100vw - 100%) / -2)
+      margin-bottom: -44px
+      @include media-breakpoint-up(md)
+        margin-bottom: -54px
+      @include media-breakpoint-up(xl)
+        margin-top: 0
+        margin-left: 50px
+        margin-right: calc((100vw - 100%) / -2)
+        margin-bottom: 0
+      @include media-breakpoint-up(xxl)
+        margin-left: 90px
+      .img
+        width: 100%
+        height: 336px
+        object-fit: cover
+        @include media-breakpoint-up(md)
+          height: 440px
+        @include media-breakpoint-up(xl)
+          height: 100%

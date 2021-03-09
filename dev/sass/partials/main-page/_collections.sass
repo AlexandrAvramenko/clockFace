@@ -1,0 +1,59 @@
+.collections
+  &__wrapper
+    background-color: $lightGrey
+    padding: 40px 20px
+    @include media-breakpoint-up(md)
+      padding: 50px 0
+    @include media-breakpoint-up(xl)
+      padding: 76px 0 82px
+  &__heading
+    text-align: center
+    padding: 0 16px
+    margin-bottom: 30px
+    @include media-breakpoint-up(md)
+      padding: 0
+      margin-bottom: 24px
+    @include media-breakpoint-up(xl)
+      margin-bottom: 50px
+  &__content
+    @include media-breakpoint-up(xl)
+      max-width: 1096px
+      margin: auto
+    @include media-breakpoint-up(xxl)
+      max-width: 1260px
+  &__list
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 0
+    @include media-breakpoint-up(md)
+      flex-direction: row
+      justify-content: space-between
+  &__item
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 187px
+    height: 34px
+    font-size: 13px
+    line-height: 20px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    border: 1px solid $yellow
+    border-radius: 3px
+    margin-bottom: 16px
+    @include media-breakpoint-up(md)
+      width: 209px
+      height: 36px
+      border-width: 2px
+      margin-bottom: 0
+    @include media-breakpoint-up(xl)
+      width: 316px
+      height: 66px
+      font-size: 22px
+      line-height: 27px
+    @include media-breakpoint-up(xxl)
+      width: 350px
+  &__link
+    color: $black
+    text-decoration: none
