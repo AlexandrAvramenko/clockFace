@@ -46,8 +46,8 @@ $(".slider-best-deals").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
   autoplaySpeed: 2000,
-  prevArrow: "<img src='../img/arrow-left.svg' class='prev' alt='prev'>",
-  nextArrow: "<img src='../img/arrow-right.svg' class='next' alt='next'>",
+  prevArrow: "<img src='img/arrow-left.svg' class='prev' alt='prev'>",
+  nextArrow: "<img src='img/arrow-right.svg' class='next' alt='next'>",
   responsive: [
     {
       breakpoint: 1440,
@@ -70,8 +70,8 @@ $(".slider-reviews").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplaySpeed: 2000,
-  prevArrow: "<img src='../img/arrow-left.svg' class='prev' alt='prev'>",
-  nextArrow: "<img src='../img/arrow-right.svg' class='next' alt='next'>",
+  prevArrow: "<img src='img/arrow-left.svg' class='prev' alt='prev'>",
+  nextArrow: "<img src='img/arrow-right.svg' class='next' alt='next'>",
   responsive: [
     {
       breakpoint: 1440,
