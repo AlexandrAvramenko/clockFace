@@ -14,9 +14,9 @@ section.blog
 					each item, index in articles
 						.article(class= 'article-' + (index + 1))
 							img.img(src='../../img/article-' + (index + 1) + '.png', alt="img")
-							h6.normal.category #{title}
+							h6.normal.category #{item.title}
 							h4.no-uppercase.heading
-								a(href=item.url) #{link}
+								a(href=item.url) #{item.link}
 				.link-wrapper
 					a.link(href="/") Все записи
 

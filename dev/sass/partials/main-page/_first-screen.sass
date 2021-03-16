@@ -1,14 +1,14 @@
 .first-screen
   &__wrapper
-    padding: 116px 20px 40px
     background-image: url(../../img/bg-first-screen.png)
     background-size: cover
     background-repeat: no-repeat
     background-position: 100% 50%
+    padding: 40px 20px
     @include media-breakpoint-up(md)
-      padding: 130px 0 50px
+      padding: 50px 0
     @include media-breakpoint-up(xl)
-      padding: 183px 0 82px
+      padding: 76px 0 82px
   &__content
     position: relative
     text-align: center
@@ -28,6 +28,7 @@
       @include media-breakpoint-up(xxl)
         max-width: 1260px
   &__heading
+    color: $blue
     margin-bottom: 20px
     @include media-breakpoint-up(md)
       font-size: 42px

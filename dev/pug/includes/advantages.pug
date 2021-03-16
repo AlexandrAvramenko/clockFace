@@ -9,14 +9,14 @@
 section.advantages
 	.advantages__wrapper
 		.container
-			h2.advantages__heading В нашей роскошной коллекции
+			h2.advantages__heading Наши преимущества
 			.advantages__content
 				.left-side
 					.list
 						each val, index in advantages
 							.item
 								img.icon(src="../../img/benefit-" + (index + 1) + ".svg", alt="icon")
-								h4.heading.no-uppercase #{val.title}
+								h5.heading.no-uppercase #{val.title}
 								.text-s #{val.text}
 				.right-side
 					img.img(src="../../img/advantages.png", alt="img")
