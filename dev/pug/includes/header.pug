@@ -40,9 +40,11 @@ section.header
 			.header__content
 				.header__logo-wrapper
 					.header__logo
-						img.img(src="../img/logo.svg", alt="img")
+						a(href="/")
+							img.img(src="../img/logo.svg", alt="img")
 					.header__logo-small
-						img(src="../img/logo-small.svg", alt="img")
+						a(href="/")
+							img(src="../img/logo-small.svg", alt="img")
 				.header__menu
 					.header__menu-left
 						+list(menu_list, 'list', 'item', true, 'link')

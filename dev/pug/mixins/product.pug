@@ -1,0 +1,16 @@
+mixin product(data, slider)
+	each item in data
+		div(class= slider ? 'slide product' : 'product')
+			.img-wrapper
+				img.img(src='../../img/' + item.img, alt="img")
+				if item.like
+					img.icon.icon-like(src='../../img/' + item.like, alt="icon")
+				if item.compare
+					img.icon.icon-compare(src='../../img/' + item.compare, alt="icon")
+				if item.docs
+					img.icon.icon-docs(src='../../img/' + item.docs, alt="icon")
+				if item.pack
+					img.icon.icon-pack(src='../../img/' + item.pack, alt="icon")
+			h6.name #{item.name}
+			.text-xs.model #{item.model}
+			.price #{item.price}

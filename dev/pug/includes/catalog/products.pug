@@ -1,0 +1,15 @@
+include ../../mixins/product
+
+-
+	const catalog = [
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg', compare: 'compare.svg', docs: 'docs.svg', pack: 'pack.svg'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg', compare: 'compare.svg'},
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg'}
+	]
+
+
+.products
+	.products-wrapper
+		+product(catalog)

@@ -1,24 +1,26 @@
+include ../../mixins/product
+
 -
 	const lastReceipts = [
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: '../../img/like.svg'},
-		{img:'../../img/adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: '../../img/like.svg'},
-		{img:'../../img/adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: '../../img/like.svg', percent: '../../img/percent.svg'},
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: '../../img/like.svg'},
-		{img:'../../img/adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: '../../img/like.svg'}
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg', compare: 'compare.svg', docs: 'docs.svg', pack: 'pack.svg'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg', compare: 'compare.svg'},
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽', like: 'like.svg'}
 	]
 	const expectedPositions = [
-		{img:'../../img/adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'}
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'}
 	]
 	const discountsAndPromotions = [
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
-		{img:'../../img/adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'}
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'},
+		{img:'adriatica-2.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '4 272 ₽'}
 	]
 
 section.best-deals
@@ -33,59 +35,21 @@ section.best-deals
 					.tab-content.active(data-content="tab-1")
 						.slider-wrapper
 							.slider-best-deals
-								each item in lastReceipts
-									.slide
-										.img-wrapper
-											img.img(src=item.img, alt="img")
-											if item.like
-												img.icon.icon-like(src=item.like, alt="icon")
-											if item.percent
-												img.icon.icon-percent(src=item.percent, alt="icon")
-										h6.name #{item.name}
-										.text-xs.model #{item.model}
-										.price #{item.price}
+								+product(lastReceipts, true)
 
 					.tab-content(data-content="tab-2")
 						.slider-wrapper
 							.slider-best-deals
-								each item in expectedPositions
-									.slide
-										.img-wrapper
-											img.img(src=item.img, alt="img")
-											if item.like
-												img.icon.icon-like(src=item.like, alt="icon")
-											if item.percent
-												img.icon.icon-percent(src=item.percent, alt="icon")
-										h6.name #{item.name}
-										.text-xs.model #{item.model}
-										.price #{item.price}
+								+product(expectedPositions, true)
+
 					.tab-content(data-content="tab-3")
 						.slider-wrapper
 							.slider-best-deals
-								each item in discountsAndPromotions
-									.slide
-										.img-wrapper
-											img.img(src=item.img, alt="img")
-											if item.like
-												img.icon.icon-like(src=item.like, alt="icon")
-											if item.percent
-												img.icon.icon-percent(src=item.percent, alt="icon")
-										h6.name #{item.name}
-										.text-xs.model #{item.model}
-										.price #{item.price}
+								+product(discountsAndPromotions, true)
 
 				.tablet-down
 					.slider-wrapper
 							h2.heading Последние поступления
 							.slider-best-deals
-								each item in lastReceipts
-									.slide
-										.img-wrapper
-											img.img(src=item.img, alt="img")
-											if item.like
-												img.icon.icon-like(src=item.like, alt="icon")
-											if item.percent
-												img.icon.icon-percent(src=item.percent, alt="icon")
-										h6.name #{item.name}
-										.text-xs.model #{item.model}
-										.price #{item.price}
+								+product(lastReceipts, true)
+
