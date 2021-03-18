@@ -626,7 +626,7 @@ h6,
 
 @media (min-width: 1440px) {
   .content {
-    padding-top: 107px;
+    padding-top: 122px;
   }
 }
 
@@ -879,7 +879,7 @@ p {
 
 @media (min-width: 1440px) {
   .header__wrapper {
-    padding: 25px 20px 40px;
+    padding: 24px 20px 40px;
   }
 }
 
@@ -2874,6 +2874,109 @@ p {
 @media (min-width: 768px) {
   #scrollup {
     right: 50px;
+  }
+}
+
+.sales-process__wrapper {
+  background-color: #F5F7F6;
+  padding: 40px 20px;
+}
+
+@media (min-width: 768px) {
+  .sales-process__wrapper {
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sales-process__wrapper {
+    padding: 76px 0;
+  }
+}
+
+.sales-process__heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.sales-process__content .list {
+  margin: -25px -20px;
+}
+
+@media (min-width: 768px) {
+  .sales-process__content .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.sales-process__content .list .item {
+  margin: 25px 20px;
+}
+
+@media (min-width: 768px) {
+  .sales-process__content .list .item {
+    text-align: center;
+    width: calc(100% / 3);
+  }
+}
+
+.sales-process__content .list .item .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 24px;
+  line-height: 35;
+  color: #FFFFFF;
+  width: 36px;
+  height: 36px;
+  background: #FFC72B;
+  border-radius: 3px;
+  margin-right: 13px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .sales-process__content .list .item .icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sales-process__content .list .item .heading {
+  color: #0D2951;
+  margin-bottom: 16px;
+}
+
+.sales-process__content .list .item .heading-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .sales-process__content .list .item .heading-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sales-process__content .list .item .description {
+    font-size: 21px;
+    line-height: 28px;
   }
 }
 
