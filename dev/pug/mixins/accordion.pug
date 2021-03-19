@@ -1,0 +1,7 @@
+mixin accordion(heading, styledAddCls)
+    div(class='accordion ' + styledAddCls || '')
+        .accordion__heading #{heading}
+            img.icon(src='../img/chevron.svg')
+        .accordion__content
+            block
+        .divider

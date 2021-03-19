@@ -96,3 +96,13 @@ $(function () {
     $("body,html").animate({ scrollTop: 0 }, 800);
   });
 });
+
+// accordion
+$('.accordion__heading').click(function () {
+  if($(this).next().is(':hidden')) {
+    $('.accordion__heading').removeClass('active');
+    $('.accordion__content').slideUp(300);
+  }
+  $(this).toggleClass('active');
+  $(this).next().slideToggle(300);
+});

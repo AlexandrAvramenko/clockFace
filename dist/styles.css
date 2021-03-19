@@ -680,6 +680,11 @@ p {
   margin-top: 0;
 }
 
+.divider {
+  border-top: 1px solid #C4C4C4;
+  height: 0;
+}
+
 .btn {
   display: inline-block;
   font-size: 13px;
@@ -1527,6 +1532,39 @@ p {
 
 .next {
   right: 0;
+}
+
+.accordion__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.accordion__heading.active {
+  padding-bottom: 10px;
+}
+
+.accordion__heading.active .icon {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  display: none;
+  margin-bottom: 20px;
 }
 
 .product .img {
@@ -3036,6 +3074,89 @@ p {
     font-size: 21px;
     line-height: 28px;
   }
+}
+
+.answers-questions__wrapper {
+  background-color: #F5F7F6;
+  padding: 40px 20px;
+}
+
+@media (min-width: 768px) {
+  .answers-questions__wrapper {
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .answers-questions__wrapper {
+    padding: 76px 0;
+  }
+}
+
+.answers-questions__heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.answers-questions__subheading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .answers-questions__subheading {
+    margin-bottom: 36px;
+  }
+}
+
+.answers-questions__subheading .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #0D2951;
+}
+
+.answers-questions__subheading .phone .icon {
+  margin-right: 11px;
+}
+
+@media (min-width: 768px) {
+  .answers-questions__content {
+    max-width: 562px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .answers-questions__content {
+    max-width: 645px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .answers-questions__content {
+    max-width: 745px;
+  }
+}
+
+.answers-questions .item {
+  margin-bottom: 8px;
+}
+
+.answers-questions .item:first-child {
+  margin-top: 8px;
+}
+
+.answers-questions .item:last-child {
+  margin-bottom: 0;
 }
 
 .advantages__wrapper {
