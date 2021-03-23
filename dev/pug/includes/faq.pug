@@ -1,15 +1,15 @@
-include ../../mixins/accordion
+include ../mixins/accordion
 
-section.answers-questions
-	.answers-questions__wrapper
+section.faq
+	.faq__wrapper
 		.container
-			h3.answers-questions__heading.normal Ответы на вопросы
-			.answers-questions__subheading
+			h3.faq__heading.normal Ответы на вопросы
+			.faq__subheading
 				a.phone.text-s(href="tel:+38 (044) 383-55-55") #[img.icon(src="../../img/phone.svg" alt="icon")] +38 (044) 383-55-55
-			.answers-questions__content
+			.faq__content
 				.accordion-wrapper
 					.divider
-					+accordion('Есть ли гарания на часы?', 'answers-questions')
+					+accordion('Есть ли гарания на часы?', 'faq')
 						.text-xs На все часы, приобретаемые в нашем магазине, мы предоставляем гарантии:
 							.list
 								.item — подлинности часов;
@@ -18,11 +18,11 @@ section.answers-questions
 								.item — адекватного подхода и оптимальных цен;
 								.item — строгой комплексной проверки все часов без исключения;
 								.item — гарантию работоспособности и точности хода от 6 месяцев до 2 лет.
-					+accordion('Купить часы — это выгодно?', 'answers-questions')
+					+accordion('Купить часы — это выгодно?', 'faq')
 						.text-xs Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!
-					+accordion('Как я могу определить стоимость часов?', 'answers-questions')
+					+accordion('Как я могу определить стоимость часов?', 'faq')
 						.text-xs Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!
-					+accordion('Как я могу купить часы?', 'answers-questions')
+					+accordion('Как я могу купить часы?', 'faq')
 						.text-xs Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!
-					+accordion('Можно ли поменять часы на другие?', 'answers-questions')
+					+accordion('Можно ли поменять часы на другие?', 'faq')
 						.text-xs Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!

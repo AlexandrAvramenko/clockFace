@@ -114,7 +114,8 @@ input
 	border: 1px solid $blue35
 	border-radius: 3px
 	box-sizing: border-box
-	padding: 10px 16px
+	padding: 11px 16px
+	margin-bottom: 20px
 	@include media-breakpoint-up(md)
 		font-size: 21px
 		line-height: 28px
@@ -125,6 +126,114 @@ input
 	&::placeholder
 		color: $black37
 
+// input[file]
+.field-file
+	position: relative
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+	.fileLoad
+		display: none
+		position: relative
+		input
+			padding-left: 55px
+		.icon
+			position: absolute
+			top: 17px
+		.icon-photo
+			left: 16px
+		.icon-del-photo
+			right: 16px
+			cursor: pointer
+	&__label
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		height: 49px
+		background-color: $white
+		border: 1px solid $blue35
+		border-radius: 3px
+		box-sizing: border-box
+		cursor: pointer
+		padding: 10px 0 10px 16px
+		margin-bottom: 20px
+		@include media-breakpoint-up(md)
+			height: 64px
+		&:hover, &:focus
+			border-color: $black
+		&-text
+			font-size: 16px
+			line-height: 1
+			border-bottom: 1px solid $blue
+			@include media-breakpoint-up(md)
+				font-size: 21px
+				letter-spacing: .01em
+	&__icon
+		width: 15px
+		@include media-breakpoint-up(md)
+			width: auto
+		&-wrapper
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 49px
+			height: 49px
+			background: $blue
+			border-radius: 2px
+			@include media-breakpoint-up(md)
+				width: 62px
+				height: 62px
+
+// toggle
+.toggle
+	display: inline-flex
+	overflow: hidden
+	border: 1px solid $blue35
+	border-radius: 3px
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 20px
+	&-label
+		font-size: 16px
+		line-height: 25px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			line-height: 26px
+			letter-spacing: .01em
+			padding-left: 16px
+	&-item
+		display: inline-flex
+		input[type=radio]
+			display: none
+		label
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			width: 60px
+			height: 49px
+			font-size: 14px
+			line-height: 22px
+			color: $blue50
+			background: $white
+			border-right: none
+			cursor: pointer
+			user-select: none
+			@include media-breakpoint-up(md)
+				font-size: 21px
+				line-height: 28px
+				width: 78px
+				height: 68px
+
+		input[type=radio]:checked + label
+			color: $white
+			background: $blue50
+
 p
 	margin-top: 0
 
@@ -132,7 +241,6 @@ p
 .divider
 	border-top: 1px solid $black23
 	height: 0
-
 
 // // btn
 .btn
@@ -221,5 +329,3 @@ p
 			content: '★'
 		&.active
 			color: $yellow
-
-

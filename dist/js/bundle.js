@@ -106,3 +106,16 @@ $('.accordion__heading').click(function () {
   $(this).toggleClass('active');
   $(this).next().slideToggle(300);
 });
+
+// input[file]
+$('#file').change(function(){
+	var fileResult = $(this).val().split('\\').pop();
+	$(this).parent().find('.fileLoad').find('input').val(fileResult);
+  $('.fileLoad').show()
+
+  if (fileResult) {
+    $('.icon-del-photo').click(function () {
+      $('.fileLoad').hide()
+    });
+  }
+});

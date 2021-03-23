@@ -154,6 +154,72 @@
       </div>
     </section>
     <div class="content">
+      <section class="rate-watch">
+        <div class="rate-watch__wrapper">
+          <div class="container">
+            <div class="rate-watch__content">
+              <div class="left-side">
+                      <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item"><span class="breadcrumbs__title">Онлайн-оценка</span>
+                        </li>
+                      </ul>
+                <div class="image"></div>
+              </div>
+              <div class="right-side">
+                <h3 class="heading normal">Оценить часы</h3>
+                <form class="form" action="/">
+                  <input type="text" placeholder="Марка часов">
+                  <div class="field-file">
+                    <input class="field-file__input" id="file" type="file" name="uploadFile">
+                    <div class="fileLoad"><img class="icon icon-photo" src="img/photo.svg" alt="icon">
+                      <input type="text" value="Select file"><img class="icon icon-del-photo" src="img/del-photo.svg" alt="icon">
+                    </div>
+                    <label class="field-file__label" for="file"><span class="field-file__label-text">Загрузить фото</span>
+                      <div class="field-file__icon-wrapper"><img class="field-file__icon" src="img/upload.svg" alt="icon"></div>
+                    </label>
+                  </div>
+                  <div class="toggle-wrapper">
+                    <div class="toggle-label">Коробка</div>
+                    <div class="toggle">
+                      <div class="toggle-item">
+                        <input id="fid-1" type="radio" name="box" value="off" checked="">
+                        <label for="fid-1">Есть</label>
+                      </div>
+                      <div class="toggle-item">
+                        <input id="fid-2" type="radio" name="box" value="on">
+                        <label for="fid-2">Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="toggle-wrapper">
+                    <div class="toggle-label">Документы</div>
+                    <div class="toggle">
+                      <div class="toggle-item">
+                        <input id="fid-3" type="radio" name="docs" value="off">
+                        <label for="fid-3">Есть</label>
+                      </div>
+                      <div class="toggle-item">
+                        <input id="fid-4" type="radio" name="docs" value="on" checked="">
+                        <label for="fid-4">Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="text" placeholder="Имя">
+                  <input type="tel" placeholder="Телефон">
+                  <input type="email" placeholder="E-mail">
+                        <button class="btn btn-primary btn-lg" type="button">Оценить</button>
+                  <div class="privacy-policy">
+                    <div class="text">* Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.</div>
+                    <div class="text">Защита от спама reCAPTCHA <a class="link" href="/">Конфиденциальность</a> и <a class="link" href="/">Условия использования</a></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="best-choice">
         <div class="best-choice__wrapper">
           <div class="container">
@@ -224,15 +290,15 @@
           </div>
         </div>
       </section>
-      <section class="answers-questions">
-        <div class="answers-questions__wrapper">
+      <section class="faq">
+        <div class="faq__wrapper">
           <div class="container">
-            <h3 class="answers-questions__heading normal">Ответы на вопросы</h3>
-            <div class="answers-questions__subheading"><a class="phone text-s" href="tel:+38 (044) 383-55-55"><img class="icon" src="img/phone.svg" alt="icon"> +38 (044) 383-55-55</a></div>
-            <div class="answers-questions__content">
+            <h3 class="faq__heading normal">Ответы на вопросы</h3>
+            <div class="faq__subheading"><a class="phone text-s" href="tel:+38 (044) 383-55-55"><img class="icon" src="img/phone.svg" alt="icon"> +38 (044) 383-55-55</a></div>
+            <div class="faq__content">
               <div class="accordion-wrapper">
                 <div class="divider"></div>
-                      <div class="accordion answers-questions">
+                      <div class="accordion faq">
                         <div class="accordion__heading">Есть ли гарания на часы?<img class="icon" src="img/chevron.svg"></div>
                         <div class="accordion__content">
                           <div class="text-xs">На все часы, приобретаемые в&nbsp;нашем магазине, мы&nbsp;предоставляем гарантии:
@@ -248,28 +314,28 @@
                         </div>
                         <div class="divider"></div>
                       </div>
-                      <div class="accordion answers-questions">
+                      <div class="accordion faq">
                         <div class="accordion__heading">Купить часы — это выгодно?<img class="icon" src="img/chevron.svg"></div>
                         <div class="accordion__content">
                           <div class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!</div>
                         </div>
                         <div class="divider"></div>
                       </div>
-                      <div class="accordion answers-questions">
+                      <div class="accordion faq">
                         <div class="accordion__heading">Как я могу определить стоимость часов?<img class="icon" src="img/chevron.svg"></div>
                         <div class="accordion__content">
                           <div class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!</div>
                         </div>
                         <div class="divider"></div>
                       </div>
-                      <div class="accordion answers-questions">
+                      <div class="accordion faq">
                         <div class="accordion__heading">Как я могу купить часы?<img class="icon" src="img/chevron.svg"></div>
                         <div class="accordion__content">
                           <div class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!</div>
                         </div>
                         <div class="divider"></div>
                       </div>
-                      <div class="accordion answers-questions">
+                      <div class="accordion faq">
                         <div class="accordion__heading">Можно ли поменять часы на другие?<img class="icon" src="img/chevron.svg"></div>
                         <div class="accordion__content">
                           <div class="text-xs">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, cupiditate!</div>
@@ -281,6 +347,7 @@
           </div>
         </div>
       </section>
+      <div id="scrollup"><img class="icon-up" src="img/up-page.svg" alt="icon"></div>
     </div>
     <section class="footer">
       <div class="footer__wrapper">

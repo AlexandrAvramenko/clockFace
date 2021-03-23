@@ -1,0 +1,53 @@
+include ../../mixins/button
+include ../../mixins/breadcrumbs
+
+- const breadcrumbs = [{title: 'Главная', link: '/'}, {title: 'Онлайн-оценка'}]
+
+
+section.rate-watch
+	.rate-watch__wrapper
+		.container
+			.rate-watch__content
+				.left-side
+					+breadcrumbs(breadcrumbs)
+					.image
+				.right-side
+					h3.heading.normal Оценить часы
+					form.form(action="/")
+						input(type="text" placeholder='Марка часов')
+						.field-file
+							input(id="file" class="field-file__input" type='file', name='uploadFile')
+							.fileLoad
+								img.icon.icon-photo(src="../../img/photo.svg", alt="icon")
+								input(type="text" value="Select file")
+								img.icon.icon-del-photo(src="../../img/del-photo.svg", alt="icon")
+							label(class="field-file__label" for="file")
+								span(class="field-file__label-text") Загрузить фото
+								.field-file__icon-wrapper
+									img.field-file__icon(src="../../img/upload.svg", alt="icon")
+						.toggle-wrapper
+							.toggle-label Коробка
+							.toggle
+								.toggle-item
+									input(id="fid-1" type="radio" name="box" value="off" checked)
+									label(for="fid-1") Есть
+								.toggle-item
+									input(id="fid-2" type="radio" name="box" value="on")
+									label(for="fid-2") Нет
+						.toggle-wrapper
+							.toggle-label Документы
+							.toggle
+								.toggle-item
+									input(id="fid-3" type="radio" name="docs" value="off")
+									label(for="fid-3") Есть
+								.toggle-item
+									input(id="fid-4" type="radio" name="docs" value="on" checked)
+									label(for="fid-4") Нет
+						input(type="text" placeholder='Имя')
+						input(type="tel" placeholder='Телефон')
+						input(type="email" placeholder='E-mail')
+						+button('btn-primary btn-lg', 'Оценить')
+						.privacy-policy
+							.text * Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.
+							.text Защита от спама reCAPTCHA #[a.link(href="/") Конфиденциальность] и #[a.link(href="/") Условия использования]
+
