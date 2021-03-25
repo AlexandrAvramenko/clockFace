@@ -1,9 +1,11 @@
 extends layouts/main
 
+block variables
+	- const bestChoice = true
 
 block content
 	include includes/estimate/rate-watch
-	include includes/estimate/best-choice
+	include includes/info-block
 	include includes/estimate/sales-process
 	include includes/advantages
 	include includes/faq

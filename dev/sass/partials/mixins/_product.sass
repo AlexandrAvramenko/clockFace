@@ -17,21 +17,24 @@
       @include media-breakpoint-up(xxl)
         width: 290px
       .icon
+        display: none
         position: absolute
         width: 40px
         height: 40px
-        &-like
-          top: 0
-          left: 0
-        &-compare
-          top: 40px
-          left: 0
-        &-docs
-          left: 0
-          bottom: 40px
-        &-pack
-          left: 0
-          bottom: 0
+        @include media-breakpoint-up(md)
+          display: block
+          &-like
+            top: 0
+            left: 0
+          &-compare
+            top: 40px
+            left: 0
+          &-docs
+            left: 0
+            bottom: 40px
+          &-pack
+            left: 0
+            bottom: 0
   .model
     color: $black50
     margin-bottom: 20px
