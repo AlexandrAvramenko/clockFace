@@ -14,7 +14,7 @@ const 	gulp           = require('gulp'),
         cheerio        = require("gulp-cheerio"),
         replace        = require("gulp-replace"),
         rimraf         = require("rimraf"),
-        svgSprite      = require("gulp-svg-sprite"),
+        svgSprite      = require("gulp-svg-sprite");
 
 
 gulp.task('sass', function() {
