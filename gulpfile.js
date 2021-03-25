@@ -15,8 +15,6 @@ const 	gulp           = require('gulp'),
         replace        = require("gulp-replace"),
         rimraf         = require("rimraf"),
         svgSprite      = require("gulp-svg-sprite"),
-        rep            = require('gulp-replace-image-src'),
-        rebase         = require('gulp-css-url-rebase');
 
 
 gulp.task('sass', function() {
@@ -26,12 +24,11 @@ gulp.task('sass', function() {
         // (sourcemaps.init()),
         (sass()),
         (autoprefixer(['last 5 versions'])),
-        (rebase()),
-        (gulp.dest('dist/')),
+        (gulp.dest('dist/css')),
         (rename({suffix: '.min', prefix : ''})),
         (cleanCSS()),
         // (sourcemaps.write()),
-        (gulp.dest('dist/')),
+        (gulp.dest('dist/css')),
         (browserSync.reload({stream: true})),
     );
 });
@@ -104,10 +101,6 @@ gulp.task('gulp-pug', function gulpPug() {
         (pug({
             pretty: true
         })),
-        (rep({
-            prependSrc : 'img/',
-            keepOrigin : false
-          })),
         (gulp.dest('dist/')),
     );
 });

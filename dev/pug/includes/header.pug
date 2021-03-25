@@ -41,48 +41,48 @@ section.header
 				.header__logo-wrapper
 					.header__logo
 						a(href="/")
-							img.img(src="../img/logo.svg", alt="img")
+							img.img(src="./img/logo.svg", alt="img")
 					.header__logo-small
 						a(href="/")
-							img(src="../img/logo-small.svg", alt="img")
+							img(src="./img/logo-small.svg", alt="img")
 				.header__menu
 					.header__menu-left
 						+list(menu_list, 'list', 'item', true, 'link')
 					.header__menu-right
 						.list
 							.item.search
-								img(src="../img/search.svg", alt="icon")
+								img(src="./img/search.svg", alt="icon")
 							.search-content
 								.container
 									.divider
 									.wrapper
 										input.input(type="text" placeholder="Поиск")
 										+button('btn-alt', 'Найти')
-										img.close__search-content(src="../../img/close.svg", alt="icon")
+										img.close__search-content(src="./img/close.svg", alt="icon")
 							.item.number +7 999 999-88-88
 							.item.lang
 								a.link(href="/") EN
 							.item.login
 								a.link(href="/")
-									img(src="../img/login.svg", alt="icon")
+									img(src="./img/login.svg", alt="icon")
 						+button('btn-primary btn-sm', 'Онлайн-оценка')
 				.header__menu-small
 					each item in menu_small
 						.social-item
 							a(class='mobile-link ' + item.icon  href=item.url)
-								img.img(src="../img/" + item.icon + ".svg", alt="icon")
+								img.img(src="./img/" + item.icon + ".svg", alt="icon")
 					.search
-							img(src="../img/sm-search.svg", alt="icon")
+							img(src="./img/sm-search.svg", alt="icon")
 					.search-content
 						.container
 							.divider
 							.wrapper
 								input.input(type="text" placeholder="Поиск")
 								+button('btn-alt', 'Найти')
-								img.close__search-content(src="../../img/close.svg", alt="icon")
+								img.close__search-content(src="./img/close.svg", alt="icon")
 				.header__burger
-					img.burger(src="../../img/burger.svg", alt="icon")
-					img.close(src="../../img/close.svg", alt="icon")
+					img.burger(src="./img/burger.svg", alt="icon")
+					img.close(src="./img/close.svg", alt="icon")
 
 
 				.header__menu-mobile
@@ -90,22 +90,22 @@ section.header
 						.list
 							.item
 								.mobile-dropdown Купить
-									img.icon(src="../img/chevron.svg", alt="icon")
+									img.icon(src="./img/chevron.svg", alt="icon")
 								.mobile-dropdown__content
 									+list(buy_sale_pledge, 'list', 'item', true, 'link')
 							.item
 								.mobile-dropdown Продать
-									img.icon(src="../img/chevron.svg", alt="icon")
+									img.icon(src="./img/chevron.svg", alt="icon")
 								.mobile-dropdown__content
 									+list(buy_sale_pledge, 'list', 'item', true, 'link')
 							.item
 								.mobile-dropdown Заложить
-									img.icon(src="../img/chevron.svg", alt="icon")
+									img.icon(src="./img/chevron.svg", alt="icon")
 								.mobile-dropdown__content
 									+list(buy_sale_pledge, 'list', 'item', true, 'link')
 							.item
 								.mobile-dropdown О нас
-									img.icon(src="../img/chevron.svg", alt="icon")
+									img.icon(src="./img/chevron.svg", alt="icon")
 								.mobile-dropdown__content
 									+list(aboutus_list, 'list', 'item', true, 'link')
 					.menu-mobile__right
@@ -114,7 +114,7 @@ section.header
 								a.link(href="/") EN
 							.item.login
 								a.link(href="/")
-									img.icon(src="../img/login.svg", alt="icon")
+									img.icon(src="./img/login.svg", alt="icon")
 									| Войти
 							.item.double
 								.number +7 999 999-88-88
@@ -123,5 +123,5 @@ section.header
 							each item in mobile_list
 								.social-item
 									a(class='social-link ' + item.icon  href=item.url)
-										img.img(src="../img/" + item.icon + ".svg", alt="icon")
+										img.img(src="./img/" + item.icon + ".svg", alt="icon")
 
