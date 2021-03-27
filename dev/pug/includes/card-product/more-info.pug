@@ -1,0 +1,47 @@
+-
+	const
+		characteristicsOne = [
+			{title: 'Муж./Жен', value: 'мужские'},
+			{title: 'REF', value: '1200 CC AT', icon: './img/info.svg'},
+			{title: 'Состояние', value: 'идеальное'},
+			{title: 'Механизм', value: 'механика с автоподзаводом'},
+			{title: 'Функции', value: 'часы, минуты, секунды, хронограф', icon: './img/info.svg'},
+			{title: 'Корпус', value: 'розовое золото, диаметр 32х44 мм, сапфировое стекло, водонепроницаемость 30 м'}
+			]
+		characteristicsTwo = [
+			{title: 'Возраст', value: '8 лет'},
+			{title: 'Циферблат', value: 'серебристый, гильошированный'},
+			{title: 'Ремешок', value: 'из крокодиловой кожи, простая застежка из розового золота', icon: './img/info.svg'},
+			{title: 'Документы', value: 'есть'},
+			{title: 'Коробка', value: 'нет'},
+			{title: 'Наличие', value: 'в наличии'}
+			]
+
+section.more-info
+	.more-info__wrapper
+		.container
+			.more-info__content
+				.tabs
+					.tab.text-m.active(data-tab="tab-1") Описание и характеристики
+					.tab.text-m(data-tab="tab-2") Оплата, гарантия и доставка
+
+					.tab-content.active(data-content="tab-1")
+						.characteristics
+							.list.list-1
+								each item in characteristicsOne
+									.item
+										.title #{item.title}
+											if item.icon
+												img.icon(src=item.icon, alt="icon")
+										.description #{item.value}
+							.list.list-2
+								each item in characteristicsTwo
+									.item
+										.title #{item.title}
+											if item.icon
+													img.icon(src=item.icon, alt="icon")
+										.description #{item.value}
+
+
+					.tab-content(data-content="tab-2")
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam a sapiente reprehenderit ut adipisci assumenda doloremque labore maxime! Consectetur enim cumque numquam ipsam dignissimos dolorem neque quidem itaque magni reprehenderit ex magnam deleniti reiciendis repudiandae obcaecati modi accusamus eaque, ut repellendus doloribus tenetur blanditiis ducimus. Error molestias commodi et alias tenetur modi asperiores unde, autem, reprehenderit earum perferendis, natus quisquam?
