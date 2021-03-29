@@ -1,0 +1,122 @@
+.card
+  &__wrapper
+    padding: 10px 20px 40px
+    @include media-breakpoint-up(md)
+      padding: 52px 0 50px
+    @include media-breakpoint-up(xl)
+      padding: 10px 0 76px
+  &__content
+    @include media-breakpoint-up(md)
+      display: flex
+      margin-left: -12px
+      margin-right: -12px
+  &__left
+    @include media-breakpoint-up(md)
+      width: 50%
+      margin-left: 12px
+      margin-right: 12px
+    .breadcrumbs
+      margin-top: -36px
+    .slider-wrapper
+      margin-bottom: 67px
+      .slide
+        display: flex
+        justify-content: center
+        .img
+          max-width: 188px
+  &__right
+    @include media-breakpoint-up(md)
+      width: 50%
+      margin-left: 12px
+      margin-right: 12px
+    .category
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: .06em
+      color: $black50
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 12px
+      @include media-breakpoint-up(md)
+        font-size: 13px
+        line-height: 23px
+        letter-spacing: .08em
+        text-align: left
+        margin-bottom: 0
+    .heading
+      font-size: 32px
+      line-height: 39px
+      letter-spacing: .01em
+      text-align: center
+      padding-left: 8px
+      padding-right: 8px
+      margin-bottom: 30px
+      @include media-breakpoint-up(md)
+        text-align: left
+        padding: 0
+    .model
+      margin-bottom: 12px
+    .description
+      margin-bottom: 24px
+      @include media-breakpoint-up(md)
+        margin-bottom: 10px
+    .price
+      .currency
+        display: flex
+        align-items: center
+        font-size: 26px
+        line-height: 31px
+        letter-spacing: .01em
+        font-weight: 700
+        margin-bottom: 32px
+        @include media-breakpoint-up(md)
+          font-size: 21px
+          margin-bottom: 0px
+        .selected
+          margin-right: auto
+        .evro
+          margin-left: 10px
+    .recommended
+      font-size: 12px
+      line-height: 18px
+      color: $black50
+      text-align: center
+      margin-bottom: 4px
+      @include media-breakpoint-up(md)
+        font-size: 14px
+        line-height: 22px
+        color: $blue50
+        text-align: left
+    .change-price
+      display: block
+      font-size: 12px
+      line-height: 17px
+      color: $black50
+      text-align: center
+      margin-bottom: 30px
+      @include media-breakpoint-up(md)
+        font-size: 14px
+        line-height: 25px
+        text-align: left
+    .btn
+      display: flex
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 20px
+    .question
+      text-align: center
+      margin-bottom: 20px
+      @include media-breakpoint-up(md)
+        text-align: left
+    .connect
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 12px
+      line-height: 17px
+      color: $black50
+      text-align: center
+      @include media-breakpoint-up(md)
+        text-align: left
+      .icon
+        margin-right: 8px

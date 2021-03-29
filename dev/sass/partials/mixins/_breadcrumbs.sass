@@ -1,25 +1,28 @@
 .breadcrumbs
-  list-style: none
-  display: flex
-  padding: 0
-  & > *
-    &:not(:last-child)
-      margin-right: 27px
+  display: none
+  @include media-breakpoint-up(md)
+    display: flex
+    list-style: none
+    display: flex
+    padding: 0
+    & > *
+      &:not(:last-child)
+        margin-right: 27px
 
-  &__item
-    white-space: nowrap
-    text-transform: uppercase
-  &__link
-    position: relative
-    color: $black50
-    text-decoration: none
-    &:after
-      content: ''
-      position: absolute
-      width: 16px
-      height: 16px
-      background-image: url(./../img/arrow-right.svg)
-      background-size: 50% 50%
-      background-size: cover
-      margin-left: 6px
-      margin-right: 6px
+    &__item
+      white-space: nowrap
+      text-transform: uppercase
+    &__link
+      position: relative
+      color: $black50
+      text-decoration: none
+      &:after
+        content: ''
+        position: absolute
+        width: 16px
+        height: 16px
+        background-image: url(./../img/arrow-right.svg)
+        background-size: 50% 50%
+        background-size: cover
+        margin-left: 6px
+        margin-right: 6px
