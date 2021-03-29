@@ -2292,43 +2292,44 @@ p {
     .card__right .description {
       margin-bottom: 30px; } }
 
-.card__right .price {
-  margin-right: 30px; }
-  @media (min-width: 1440px) {
-    .card__right .price-wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      margin-bottom: 30px; } }
-  .card__right .price .currency {
+@media (min-width: 1440px) {
+  .card__right .price {
+    width: 50%;
+    margin-right: 30px; } }
+
+@media (min-width: 1440px) {
+  .card__right .price-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 26px;
-    line-height: 31px;
-    letter-spacing: .01em;
-    font-weight: 700;
-    margin-bottom: 30px; }
-    @media (min-width: 768px) {
-      .card__right .price .currency {
-        font-size: 21px;
-        margin-bottom: 0px; } }
-    @media (min-width: 1440px) {
-      .card__right .price .currency {
-        font-size: 32px; } }
-    .card__right .price .currency .selected {
-      margin-right: auto; }
-      @media (min-width: 1440px) {
-        .card__right .price .currency .selected {
-          margin-right: 70px; } }
-    .card__right .price .currency .evro {
-      margin-left: 10px; }
+    margin-bottom: 30px; } }
+
+.card__right .price .currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: .01em;
+  font-weight: 700;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .card__right .price .currency {
+      font-size: 21px;
+      margin-bottom: 0px; } }
+  @media (min-width: 1440px) {
+    .card__right .price .currency {
+      font-size: 32px; } }
+  .card__right .price .currency .selected {
+    margin-right: auto; }
+  .card__right .price .currency .evro {
+    margin-left: 10px; }
 
 .card__right .recommended {
   font-size: 12px;
