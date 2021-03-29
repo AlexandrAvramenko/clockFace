@@ -10,20 +10,65 @@
       display: flex
       margin-left: -12px
       margin-right: -12px
+    @include media-breakpoint-up(xl)
+      margin-left: -25px
+      margin-right: -25px
   &__left
     @include media-breakpoint-up(md)
       width: 50%
       margin-left: 12px
       margin-right: 12px
+    @include media-breakpoint-up(xl)
+      margin-left: 25px
+      margin-right: 25px
     .breadcrumbs
-      margin-top: -36px
+      @include media-breakpoint-up(md)
+        margin-top: -36px
+        margin-bottom: 80px
+      @include media-breakpoint-up(xl)
+        margin-top: 0
+        margin-bottom: 48px
     .slider-wrapper
       margin-bottom: 67px
+      @include media-breakpoint-up(xl)
+        margin-left: 130px
       .slide
         display: flex
         justify-content: center
         .img
-          max-width: 188px
+          width: 350px
+      .slick-dots
+        @include media-breakpoint-up(xl)
+          display: flex
+          flex-direction: column
+          top: 0
+          left: -130px
+          li
+            width: 78px
+            height: 78px
+            border: 1px solid $black23
+            margin-bottom: 13px
+            button
+              width: 78px
+              height: 78px
+              &:before
+                opacity: 0
+      .dots
+        display: none
+        @include media-breakpoint-up(xl)
+          display: block
+          position: absolute
+          top: 5px
+          left: -120px
+          z-index: -1
+          .dot
+            width: 70px
+            height: 70px
+            margin-bottom: 23px
+            .img
+              width: 100%
+              height: 100%
+              object-fit: contain
   &__right
     @include media-breakpoint-up(md)
       width: 50%
@@ -39,10 +84,12 @@
       margin-bottom: 12px
       @include media-breakpoint-up(md)
         font-size: 13px
-        line-height: 23px
+        line-height: 20px
         letter-spacing: .08em
         text-align: left
         margin-bottom: 0
+      @include media-breakpoint-up(xl)
+        margin-bottom: 20px
     .heading
       font-size: 32px
       line-height: 39px
@@ -52,15 +99,28 @@
       padding-right: 8px
       margin-bottom: 30px
       @include media-breakpoint-up(md)
+        font-size: 29px
         text-align: left
         padding: 0
+      @include media-breakpoint-up(xl)
+        font-size: 42px
+        line-height: 52px
     .model
       margin-bottom: 12px
     .description
       margin-bottom: 24px
       @include media-breakpoint-up(md)
         margin-bottom: 10px
+      @include media-breakpoint-up(xl)
+        margin-bottom: 30px
     .price
+      @include media-breakpoint-up(xl)
+      margin-right: 30px
+      &-wrapper
+        @include media-breakpoint-up(xl)
+          display: flex
+          align-items: center
+          margin-bottom: 30px
       .currency
         display: flex
         align-items: center
@@ -68,12 +128,16 @@
         line-height: 31px
         letter-spacing: .01em
         font-weight: 700
-        margin-bottom: 32px
+        margin-bottom: 30px
         @include media-breakpoint-up(md)
           font-size: 21px
           margin-bottom: 0px
+        @include media-breakpoint-up(xl)
+          font-size: 32px
         .selected
           margin-right: auto
+          @include media-breakpoint-up(xl)
+            margin-right: 70px
         .evro
           margin-left: 10px
     .recommended
@@ -87,6 +151,9 @@
         line-height: 22px
         color: $blue50
         text-align: left
+      @include media-breakpoint-up(xl)
+        font-size: 17px
+        line-height: 25px
     .change-price
       display: block
       font-size: 12px
@@ -98,16 +165,32 @@
         font-size: 14px
         line-height: 25px
         text-align: left
+      @include media-breakpoint-up(xl)
+        order: 2
     .btn
       display: flex
       margin-left: auto
       margin-right: auto
       margin-bottom: 20px
+      @include media-breakpoint-up(md)
+        margin-left: 0
+        margin-right: 0
+      @include media-breakpoint-up(xl)
+        order: 1
+        margin-right: 32px
+        margin-bottom: 36px
+      &-group
+        @include media-breakpoint-up(xl)
+          display: flex
+          align-items: center
     .question
       text-align: center
       margin-bottom: 20px
       @include media-breakpoint-up(md)
         text-align: left
+        margin-bottom: 30px
+      @include media-breakpoint-up(xl)
+        margin-bottom: 40px
     .connect
       display: flex
       justify-content: center
@@ -115,8 +198,9 @@
       font-size: 12px
       line-height: 17px
       color: $black50
-      text-align: center
       @include media-breakpoint-up(md)
-        text-align: left
+        justify-content: flex-start
+        font-size: 17px
+        line-height: 25px
       .icon
         margin-right: 8px

@@ -4,7 +4,7 @@ include ../../mixins/breadcrumbs
 -
 	const
 		breadcrumbs = [{title: 'Главная', link: '/'}, {title: 'Купить часы', link: '/'}, {title: 'Последние поступления'}]
-		gallery = ['adriatica.png', 'adriatica-2.png', 'adriatica-3.png']
+		gallery = ['adriatica.png', 'adriatica-2.png', 'adriatica-3.png', 'adriatica.png', 'adriatica-2.png',]
 
 section.card
 	.card__wrapper
@@ -18,25 +18,34 @@ section.card
 								each item in gallery
 									.slide
 										img.img(src='./img/' + item, alt="img")
+							.dots
+								each item in gallery
+									.dot
+										img.img(src='../img/' + item, alt="img")
+
+
 				.card__right
 					.category Мужские часы
 					.heading Franck Muller Long Island
 					.model Ref. 1200 CC AT
 					.description.text-s Розовое золото, 32х44 мм, сапфировое стекло, водонепроницаемость 30 м. Long Island с четырехугольным корпусом и угловатыми цифрами стал выдающейся коллекцией Franck Muller. Благодаря прямолинейным и выгнутым цифрам Long Island стал легендарной моделью среди наручных часов для мужчин.
-					.price
-						.currency
-							.ru.selected ₽ 590 000
-							.dollar
-								a(href="/")
-									img(src="../img/dollar.svg", alt="icon")
-							.evro
-								a(href="/")
-									img(src="../img/evro.svg", alt="icon")
-					.recommended Рекомендуемая цена: ₽ 2 300 000
-					a.change-price(href="/") Сообщить об изменении цены
-					+button('btn-secondary btn-lg', 'зарезервировать')
+					.price-wrapper
+						.price
+							.currency
+								.ru.selected ₽ 590 000
+								.dollar
+									a(href="/")
+										img(src="../img/dollar.svg", alt="icon")
+								.evro
+									a(href="/")
+										img(src="../img/evro.svg", alt="icon")
+						.recommended Рекомендуемая цена: ₽ 2 300 000
+					.btn-group
+						a.change-price(href="/") Сообщить об изменении цены
+						+button('btn-secondary', 'Зарезервировать')
 					h6.normal.question Хотите продать свои часы?
-					.connect #[img.icon(src="./img/phone.svg", alt="icon")] Задать вопрос
+					a.connect(href="/") #[img.icon(src="./img/phone.svg", alt="icon")] Задать вопрос
+
 
 
 
