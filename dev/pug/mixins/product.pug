@@ -11,6 +11,9 @@ mixin product(data, slider)
 					img.icon.icon-docs(src='./img/' + item.docs, alt="icon")
 				if item.pack
 					img.icon.icon-pack(src='./img/' + item.pack, alt="icon")
-			h6.name #{item.name}
-			.text-xs.model #{item.model}
-			.price #{item.price}
+			.desc-wrapper
+				h6.name #{item.name}
+				.text-xs.model #{item.model}
+				.price-wrapper
+					.price #{item.price}
+					.price-old #{item.oldPrise}

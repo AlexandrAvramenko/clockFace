@@ -35,14 +35,27 @@
           &-pack
             left: 0
             bottom: 0
+  .desc-wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 90px
   .model
     color: $black50
-    margin-bottom: 20px
   .price
-    display: flex
     letter-spacing: .01em
-    font-size: 21px
-    line-height: 31px
+    font-size: 14px
+    line-height: 21px
     font-weight: bold
     color: $blue
-    margin-top: auto
+    @include media-breakpoint-up(md)
+      font-size: 21px
+      line-height: 31px
+    &-wrapper
+      height: 33px
+      margin-top: auto
+    &-old
+      font-size: 10px
+      line-height: 12px
+      color: $black37
+      text-decoration: line-through

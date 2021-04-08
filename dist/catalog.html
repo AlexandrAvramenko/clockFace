@@ -158,49 +158,128 @@
     <div class="content">
       <div class="catalog">
         <div class="catalog__heading-wrapper">
-          <h1 class="catalog__heading">Швейцарские часы</h1>
+          <h2 class="catalog__heading">Швейцарские часы</h2>
         </div>
         <div class="container">
           <div class="catalog__content-wrapper">
             <div class="catalog__aside"></div>
             <div class="catalog__content">
+              <section class="sort">
+                <div class="sort__wrapper">
+                  <div class="container">
+                    <div class="sort__content">
+                      <div class="dropdown-wrapper">
+                        <div class="dropdown-label">
+                          <div class="dropdown-icons"><img class="dropdown-icon" src="/img/chevron.svg"><img class="dropdown-chevron" src="./img/chevron.svg"></div>
+                          <input class="dropdown-input">
+                        </div>
+                        <div class="dropdown-options">
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Без фильтра</div>
+                          </div>
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Сначала новые</div>
+                          </div>
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Ожидаемые поступления</div>
+                          </div>
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Скидки и акции</div>
+                          </div>
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Бренды</div>
+                          </div>
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Сначала дорогие</div>
+                          </div>
+                          <div class="dropdown-item" data-icon="chevron.svg"><img class="dropdown-icon" src="/img/chevron.svg">
+                            <div class="dropdown-name">Сначала дешевые</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
               <div class="products">
-                <div class="products-wrapper">
-                                <div class="product">
-                                  <div class="img-wrapper"><img class="img" src="./img/adriatica.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon"><img class="icon icon-compare" src="./img/compare.svg" alt="icon"><img class="icon icon-docs" src="./img/docs.svg" alt="icon"><img class="icon icon-pack" src="./img/pack.svg" alt="icon">
-                                  </div>
-                                  <h6 class="name">Adriatica</h6>
-                                  <div class="text-xs model">Aviation A8186.5217Q</div>
-                                  <div class="price">4 272 ₽</div>
-                                </div>
-                                <div class="product">
-                                  <div class="img-wrapper"><img class="img" src="./img/adriatica-2.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon">
-                                  </div>
-                                  <h6 class="name">Adriatica</h6>
-                                  <div class="text-xs model">Aviation A8186.5217Q</div>
-                                  <div class="price">4 272 ₽</div>
-                                </div>
-                                <div class="product">
-                                  <div class="img-wrapper"><img class="img" src="./img/adriatica-3.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon"><img class="icon icon-compare" src="./img/compare.svg" alt="icon">
-                                  </div>
-                                  <h6 class="name">Adriatica</h6>
-                                  <div class="text-xs model">Aviation A8186.5217Q</div>
-                                  <div class="price">4 272 ₽</div>
-                                </div>
-                                <div class="product">
-                                  <div class="img-wrapper"><img class="img" src="./img/adriatica.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon">
-                                  </div>
-                                  <h6 class="name">Adriatica</h6>
-                                  <div class="text-xs model">Aviation A8186.5217Q</div>
-                                  <div class="price">4 272 ₽</div>
-                                </div>
-                                <div class="product">
-                                  <div class="img-wrapper"><img class="img" src="./img/adriatica-2.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon">
-                                  </div>
-                                  <h6 class="name">Adriatica</h6>
-                                  <div class="text-xs model">Aviation A8186.5217Q</div>
-                                  <div class="price">4 272 ₽</div>
-                                </div>
+                <div class="products__wrapper">
+                  <div class="container">
+                    <div class="products__list">
+                                    <div class="product">
+                                      <div class="img-wrapper"><img class="img" src="./img/adriatica.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon"><img class="icon icon-compare" src="./img/compare.svg" alt="icon"><img class="icon icon-docs" src="./img/docs.svg" alt="icon"><img class="icon icon-pack" src="./img/pack.svg" alt="icon">
+                                      </div>
+                                      <div class="desc-wrapper">
+                                        <h6 class="name">Adriatica</h6>
+                                        <div class="text-xs model">Aviation A8186.5217Q</div>
+                                        <div class="price-wrapper">
+                                          <div class="price">4 272 ₽</div>
+                                          <div class="price-old"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product">
+                                      <div class="img-wrapper"><img class="img" src="./img/adriatica-2.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon">
+                                      </div>
+                                      <div class="desc-wrapper">
+                                        <h6 class="name">Adriatica</h6>
+                                        <div class="text-xs model">Aviation A8186.5217Q</div>
+                                        <div class="price-wrapper">
+                                          <div class="price">4 272 ₽</div>
+                                          <div class="price-old">14 500 ₽</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product">
+                                      <div class="img-wrapper"><img class="img" src="./img/adriatica-3.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon"><img class="icon icon-compare" src="./img/compare.svg" alt="icon">
+                                      </div>
+                                      <div class="desc-wrapper">
+                                        <h6 class="name">Adriatica</h6>
+                                        <div class="text-xs model">Aviation A8186.5217Q</div>
+                                        <div class="price-wrapper">
+                                          <div class="price">4 272 ₽</div>
+                                          <div class="price-old"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product">
+                                      <div class="img-wrapper"><img class="img" src="./img/adriatica.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon">
+                                      </div>
+                                      <div class="desc-wrapper">
+                                        <h6 class="name">Adriatica</h6>
+                                        <div class="text-xs model">Aviation A8186.5217Q</div>
+                                        <div class="price-wrapper">
+                                          <div class="price">4 272 ₽</div>
+                                          <div class="price-old"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product">
+                                      <div class="img-wrapper"><img class="img" src="./img/adriatica-2.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon">
+                                      </div>
+                                      <div class="desc-wrapper">
+                                        <h6 class="name">Adriatica</h6>
+                                        <div class="text-xs model">Aviation A8186.5217Q</div>
+                                        <div class="price-wrapper">
+                                          <div class="price">4 272 ₽</div>
+                                          <div class="price-old"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="product">
+                                      <div class="img-wrapper"><img class="img" src="./img/adriatica-3.png" alt="img"><img class="icon icon-like" src="./img/like.svg" alt="icon"><img class="icon icon-compare" src="./img/compare.svg" alt="icon">
+                                      </div>
+                                      <div class="desc-wrapper">
+                                        <h6 class="name">Adriatica</h6>
+                                        <div class="text-xs model">Aviation A8186.5217Q</div>
+                                        <div class="price-wrapper">
+                                          <div class="price">4 272 ₽</div>
+                                          <div class="price-old"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                    </div>
+                                  <button class="btn btn-primary" type="button">Показать еще</button>
+                  </div>
                 </div>
               </div>
             </div>

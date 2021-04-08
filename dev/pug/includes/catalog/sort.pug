@@ -1,0 +1,26 @@
+-
+	const sort = [
+		{title: 'Без фильтра', icon: 'chevron.svg'},
+		{title: 'Сначала новые', icon: 'chevron.svg'},
+		{title: 'Ожидаемые поступления', icon: 'chevron.svg'},
+		{title: 'Скидки и акции', icon: 'chevron.svg'},
+		{title: 'Бренды', icon: 'chevron.svg'},
+		{title: 'Сначала дорогие', icon: 'chevron.svg'},
+		{title: 'Сначала дешевые', icon: 'chevron.svg'}
+	]
+
+section.sort
+	.sort__wrapper
+		.container
+			.sort__content
+				div(class='dropdown-wrapper')
+					.dropdown-label
+							.dropdown-icons
+									img.dropdown-icon(src=`/img/${sort[0].icon}`)
+									img.dropdown-chevron(src='./img/chevron.svg')
+							input(class='dropdown-input')&attributes(attributes)
+					.dropdown-options
+							each item in sort
+								.dropdown-item(data-icon=item.icon)
+										img.dropdown-icon(src=`/img/${item.icon}`)
+										.dropdown-name #{item.title}

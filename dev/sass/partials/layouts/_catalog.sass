@@ -1,8 +1,15 @@
 .catalog
   &__heading
+    text-align: center
+    padding: 0 16px
     &-wrapper
       display: flex
       justify-content: center
       align-items: center
-      background: url(./../img/bg-catalog.png) 50% 50%
+      background: url(./../img/bg-catalog.png) 0 50%
+      background-size: cover
       height: 140px
+      @include media-breakpoint-up(md)
+        height: 220px
+      @include media-breakpoint-up(xl)
+        height: 300px
