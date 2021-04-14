@@ -1,0 +1,47 @@
+.checkbox
+  display: grid
+  grid-template-columns: min-content auto
+  grid-template-rows: 24px auto
+  grid-gap: 12px
+  font-size: 14px
+  line-height: 26px
+  cursor: pointer
+  &-input
+    input
+      opacity: 0
+      width: 1em
+      height: 1em
+      margin-top: 4px
+  &-control
+    display: inline-grid
+    width: 1em
+    height: 1em
+    border: 1px solid $black67
+    border-radius: 4px
+    background-color: $white
+    margin-top: 4px
+    .icon
+      fill: transparent
+      stroke: $white
+      stroke-width: 2
+      stroke-linecap: round
+      stroke-linejoin: round
+      transform: scale(0)
+      transform-origin: center center
+      margin: auto
+  &-input
+    display: grid
+    grid-template-areas: "checkbox"
+    > *
+      grid-area: checkbox
+      align-items: center
+    input
+      &:checked + .checkbox-control
+        border: 1px solid $blue
+        background-color: $blue
+        .icon
+          transform: scale(1)
+      &:hover + .checkbox-control
+        border: 1px solid $blue
+      &:focus + .checkbox-control
+        border: 1px solid $blue

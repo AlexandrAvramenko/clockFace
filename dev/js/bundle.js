@@ -129,3 +129,25 @@ $('#file').change(function(){
     });
   }
 });
+
+// select sort
+$(".select__default").click(function(){
+  $(this).parent().toggleClass("active");
+  $(".select__list").slideToggle(300)
+})
+
+$(".select__list li").click(function(){
+  var currentele = $(this).html();
+  $(".select__default li").html(currentele);
+  $(this).parents(".select__wrap").removeClass("active");
+  $(".select__list").slideToggle(300)
+})
+
+// filters
+$('.filters__heading').click(function () {
+  $(this).next().slideToggle(300);
+});
+
+$('.filters__close').click(function () {
+  $('.filters__content').slideUp(300);
+});

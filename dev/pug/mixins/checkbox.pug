@@ -1,0 +1,7 @@
+mixin checkbox(label)
+    label.checkbox
+        span.checkbox-input
+            input(type="checkbox" name="checkbox")&attributes(attributes)
+            span.checkbox-control
+                img.icon(src="./img/check-bold.svg", alt="icon")
+        span #{label}

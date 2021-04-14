@@ -1,0 +1,39 @@
+include ../../mixins/accordion
+include ../../mixins/checkbox
+
+section.filters
+	.filters__wrapper
+		.filters__heading
+			img(src="./img/filters.svg", alt="icon")
+			span.text Фильтры
+		.filters__content
+			.filters__accordion-wrapper
+				+accordion('Кому')
+					+checkbox('Мужские')
+					+checkbox('Женские')
+					+checkbox('Унисекс')
+				+accordion('Наличие')
+					+checkbox('В наличии')
+					+checkbox('Ожидаемые поступления')
+				+accordion('Бренд')
+					+checkbox('A.Lange & Sohne (3)')
+					+checkbox('Arnold and Son (1)')
+					+checkbox('Audemars Piguet (7)')
+					+checkbox('Baume & Mercier (4)')
+					+checkbox('Bell & Ross (2)')
+					+checkbox('Blancpain (3)')
+					+checkbox('BLU (1)')
+					+checkbox('Bovet (1)')
+					.all-brends
+						a.link(href="/") Все бренды
+						img(src="./img/chevron.svg", alt="icon")
+				+accordion('Цена')
+				+accordion('Поступления')
+				+accordion('Состояние')
+				+accordion('Материал')
+				+accordion('Форма')
+				+accordion('Ремешок')
+				+accordion('Механизм')
+			.btn-wrapper
+				+button('btn-secondary', 'Cбросить')
+				+button('btn-primary filters__close', 'Cвернуть')
