@@ -13,7 +13,7 @@ section.sort
 	.sort__wrapper
 		.container
 			.sort__content
-				.select__wrap
+				.select__wrapper
 					.select__default
 						li
 							.option
@@ -27,3 +27,16 @@ section.sort
 									img.icon(src="./img/" + item.icon + '.svg', alt="icon")
 									.title #{item.title}
 									img.chevron-icon(src="./img/chevron.svg", alt="icon")
+				.info-wrapper
+					.amount 323 модели
+					.price__wrapper
+						.price__list
+							.price__item.ru.selected
+								a(href="/")
+									img.icon(src="./img/ruble.svg", alt="icon")
+							.price__item.dollar
+								a(href="/")
+									img.icon(src="./img/dollar.svg", alt="icon")
+							.price__item.evro
+								a(href="/")
+									img.icon(src="./img/evro.svg", alt="icon")
