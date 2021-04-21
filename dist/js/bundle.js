@@ -117,6 +117,18 @@ $('.accordion__heading').click(function () {
   $(this).next().slideToggle(300);
 });
 
+// input label
+$('.inp').blur(function() {
+  tmpval = $(this).val();
+  if(tmpval == '') {
+      $(this).addClass('empty');
+      $(this).removeClass('not-empty');
+  } else {
+      $(this).addClass('not-empty');
+      $(this).removeClass('empty');
+  }
+});
+
 // input[file]
 $('#file').change(function(){
 	var fileResult = $(this).val().split('\\').pop();
@@ -151,3 +163,12 @@ $('.filters__heading').click(function () {
 $('.filters__close').click(function () {
   $('.filters__content').slideUp(300);
 });
+
+// modal
+$(".open-modal").click(function() {
+  $('.modal, .overlay').show();
+});
+$(".overlay, .close-modal").click(function() {
+  $('.modal, .overlay').hide();
+});
+

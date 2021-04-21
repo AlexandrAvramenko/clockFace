@@ -204,7 +204,7 @@
                   <div class="recommended">Рекомендуемая цена: ₽ 2 300 000</div>
                 </div>
                 <div class="btn-group"><a class="change-price" href="/">Сообщить об изменении цены</a>
-                        <button class="btn btn-secondary btn-lg" type="button">Зарезервировать</button>
+                        <button class="btn btn-secondary btn-lg open-modal" type="button">Зарезервировать</button>
                 </div>
                 <h6 class="normal question">Хотите продать свои часы?</h6><a class="connect" href="/"><img class="icon" src="./img/phone.svg" alt="icon"> Задать вопрос</a>
               </div>
@@ -212,6 +212,35 @@
           </div>
         </div>
       </section>
+            <div class="modal">
+              <div class="close-modal"><img src="./img/close.svg"></div>
+              <div class="modal__content">
+                <div class="image"><img src="./img/modal-preview.png"></div>
+                <div class="heading__wrapper">
+                  <div class="heading">Зарезервировать</div>
+                  <div class="subheading">Franck Muller Long Island</div>
+                </div>
+                <div class="description">Вы можете заразервировать часы на срок до 7 дней. Здесь могут быть еще какие-то условия резерва. Вы свободны ото всех финансовых обязательств. Мы перезвоним вам в ближайшее время.</div>
+                <form class="form">
+                  <div class="input-wrapper">
+                    <input class="inp" type="text" name="name" id="name">
+                    <label for="name">Имя</label>
+                  </div>
+                  <div class="input-wrapper">
+                    <input class="inp" type="text" name="phone" id="phone">
+                    <label for="phone">Телефон</label>
+                  </div>
+                  <div class="input-wrapper">
+                    <input class="inp" type="text" name="email" id="email">
+                    <label for="email">E-mail</label>
+                  </div>
+                        <button class="btn btn-alt btn-lg" type="button">Зарезервировать</button>
+                </form>
+              </div>
+              <div class="policy">* Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности»</div>
+              <div class="protection">Защита от спама reCAPTCHA. Конфиденциальность и Условия использования</div>
+            </div>
+            <div class="overlay"></div>
       <section class="more-info">
         <div class="more-info__wrapper">
           <div class="container">

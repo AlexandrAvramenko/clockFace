@@ -1,0 +1,28 @@
+mixin modal()
+	.modal
+		.close-modal
+			img(src="./img/close.svg")
+		.modal__content
+			.image
+				img(src="./img/modal-preview.png")
+			.heading__wrapper
+				.heading Зарезервировать
+				.subheading Franck Muller Long Island
+			.description Вы можете заразервировать часы на срок до 7 дней. Здесь могут быть еще какие-то условия резерва. Вы свободны ото всех финансовых обязательств. Мы перезвоним вам в ближайшее время.
+			form.form
+				.input-wrapper
+					input(type="text" name="name" id="name" class="inp")
+					label(for="name") Имя
+				.input-wrapper
+					input(type="text" name="phone" id="phone" class="inp")
+					label(for="phone") Телефон
+
+				.input-wrapper
+					input(type="text" name="email" id="email" class="inp")
+					label(for="email") E-mail
+
+				+button('btn-alt btn-lg', 'Зарезервировать')
+
+		.policy * Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности»
+		.protection Защита от спама reCAPTCHA. Конфиденциальность и Условия использования
+	.overlay
