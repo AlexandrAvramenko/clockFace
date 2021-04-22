@@ -125,6 +125,27 @@ input
 		outline: none
 	&::placeholder
 		color: $black37
+.input-wrapper
+	position: relative
+	margin-bottom: 20px
+	input
+		margin-bottom: 0
+		&:focus+label, &.not-empty+label
+			top: 12px
+			font-size: 13px
+			line-height: 23px
+	label
+		position: absolute
+		left: 18px
+		top: 50%
+		transform: translateY(-50%)
+		color: $black37
+		transition: top .5s
+		font-size: 16px
+		line-height: 25px
+		@include media-breakpoint-up(md)
+			font-size: 21px
+			line-height: 28px
 
 // input[file]
 .field-file
@@ -229,7 +250,7 @@ input
 				font-size: 21px
 				line-height: 28px
 				width: 78px
-				height: 68px
+				height: 64px
 
 		input[type=radio]:checked + label
 			color: $white

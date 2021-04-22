@@ -14,7 +14,9 @@ section.rate-watch
 				.right-side
 					h3.heading.normal Оценить часы
 					form.form(action="/")
-						input(type="text" placeholder='Марка часов')
+						.input-wrapper
+							input(type="text" id="brand" class="inp")
+							label(for="brand") Марка часов
 						.field-file
 							input(id="file" class="field-file__input" type='file', name='uploadFile')
 							.fileLoad
@@ -43,9 +45,15 @@ section.rate-watch
 								.toggle-item
 									input(id="fid-4" type="radio" name="docs" value="on" checked)
 									label(for="fid-4") Нет
-						input(type="text" placeholder='Имя')
-						input(type="tel" placeholder='Телефон')
-						input(type="email" placeholder='E-mail')
+						.input-wrapper
+							input(type="text" id="name" class="inp")
+							label(for="name") Имя
+						.input-wrapper
+							input(type="tel" id="phone" class="inp")
+							label(for="phone") Телефон
+						.input-wrapper
+							input(type="email" id="email" class="inp")
+							label(for="email") E-mail
 						+button('btn-primary btn-lg', 'Оценить')
 						.privacy-policy
 							.text * Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности.
