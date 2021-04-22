@@ -1479,6 +1479,10 @@ p {
     right: 20px;
     top: 20px;
     cursor: pointer; }
+    @media (min-width: 768px) {
+      .modal .close-modal img {
+        width: 40px;
+        height: 40px; } }
   .modal .modal__content {
     display: -webkit-box;
     display: -ms-flexbox;
