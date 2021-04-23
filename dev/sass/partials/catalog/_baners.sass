@@ -1,10 +1,16 @@
 .baners
+  @include media-breakpoint-up(xl)
+    display: none
   &__wrapper
     padding: 40px 20px
     @include media-breakpoint-up(md)
       padding: 50px 0
     @include media-breakpoint-up(xl)
       padding: 76px 0
+  &__content
+    @include media-breakpoint-up(md)
+      display: flex
+      justify-content: space-between
 .baner
   display: flex
   align-items: center
@@ -16,6 +22,9 @@
   margin-left: auto
   margin-right: auto
   margin-bottom: 30px
+  @include media-breakpoint-up(md)
+    max-width: 330px
+    margin: 0
   &__desc
     .heading
       margin-bottom: 13px

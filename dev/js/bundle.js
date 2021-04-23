@@ -172,3 +172,11 @@ $(".overlay, .close-modal").click(function() {
   $('.modal, .overlay').hide();
 });
 
+// price
+$('.price__item').click(function(e) {
+  e.preventDefault();
+  if($('.price__item').hasClass('selected')) {
+    $('.price__item').removeClass('selected')
+  }
+  $(this).toggleClass('selected')
+})

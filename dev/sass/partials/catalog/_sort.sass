@@ -1,79 +1,107 @@
 .sort
-  .select
-    &__wrapper
-      width: 280px
-      margin: 15px auto
-      position: relative
-      user-select: none
-      &.active
-        .select__default
-          .chevron-icon
-            transform: rotate(180deg)
-    &__default
-      border: 1px solid #0D2951
-      border-radius: 2px
-      list-style: none
-      position: relative
-      cursor: pointer
-      .option
+  &__content
+    @include media-breakpoint-up(md)
+      display: flex
+      max-width: 418px
+      margin-left: auto
+      margin-top: 40px
+      @include media-breakpoint-up(xl)
+        max-width: none
+    .select
+      &__wrapper
+        width: 280px
+        margin: 15px auto
         position: relative
-        display: flex
-        align-items: center
-        padding: 2px 15px
-        .icon
-          width: 32px
-          height: 32px
-          margin-right: 15px
-        .title
-          white-space: nowrap
-          overflow: hidden
-          text-overflow: ellipsis
-          margin-right: auto
-
-    &__list
-      display: none
-      width: 100%
-      background: #fff
-      border-radius: 5px
-      list-style: none
-      padding: 0
-      li
-        padding: 10px 0
+        user-select: none
+        @include media-breakpoint-up(md)
+          width: 246px
+          margin: 0
+        &.active
+          .select__default
+            .chevron-icon
+              transform: rotate(180deg)
+      &__default
+        border: 1px solid $blue
+        border-radius: 2px
+        list-style: none
+        position: relative
         cursor: pointer
-        &:hover
-          background: #fff4dd
+        .option
+          position: relative
+          display: flex
+          align-items: center
+          padding: 1px 15px
+          .icon
+            width: 32px
+            height: 32px
+            margin-right: 15px
+          .title
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+            margin-right: auto
 
-      .option
-        display: flex
-        align-items: center
-        padding: 0 15px
-        .icon
-          width: 32px
-          height: 32px
-          margin-right: 15px
-        .chevron-icon
-          display: none
-
-
-  .info-wrapper
-    display: flex
-    justify-content: space-between
-    align-items: center
-    width: 280px
-    margin-left: auto
-    margin-right: auto
-    .amount
-      color: $blue65
-    .price
       &__list
-        display: flex
-        justify-content: flex-end
-      &__item
-        margin-left: 12px
-        &.selected
-          opacity: .3
-          pointer-events: none
-        .icon
-          width: 36px
-          height: 36px
+        display: none
+        width: 100%
+        background: $white
+        border-radius: 5px
+        list-style: none
+        padding: 0
+        @include media-breakpoint-up(md)
+          position: absolute
+          background: $white
+          z-index: 1
+        li
+          padding: 10px 0
+          cursor: pointer
+
+        .option
+          display: flex
+          align-items: center
+          padding: 0 15px
+          .icon
+            width: 32px
+            height: 32px
+            margin-right: 15px
+          .chevron-icon
+            display: none
+
+
+    .info-wrapper
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 280px
+      margin-left: auto
+      margin-right: auto
+      @include media-breakpoint-up(md)
+        flex-direction: column-reverse
+        flex-wrap: wrap
+        align-items: flex-end;
+      @include media-breakpoint-up(xl)
+        width: 100%
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+      .amount
+        color: $blue65
+        @include media-breakpoint-up(md)
+          margin-top: 28px
+          margin-right: auto
+          margin-left: -86%
+        @include media-breakpoint-up(xl)
+          margin: 0 0 0 30px
+      .price
+        &__list
+          display: flex
+          justify-content: flex-end
+        &__item
+          margin-left: 12px
+          &.selected
+            opacity: .3
+            pointer-events: none
+          .icon
+            width: 36px
+            height: 36px
 
