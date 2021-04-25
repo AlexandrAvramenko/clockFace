@@ -1,0 +1,60 @@
+.baners
+  @include media-breakpoint-up(xl)
+    display: none
+  &__wrapper
+    padding: 40px 20px
+    @include media-breakpoint-up(md)
+      padding: 30px 0 50px
+    @include media-breakpoint-up(xl)
+      padding: 76px 0
+  &__content
+    @include media-breakpoint-up(md)
+      display: flex
+      justify-content: space-between
+  .baner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: $lightGrey
+    max-width: 280px
+    box-sizing: border-box
+    padding: 21px 12px 21px 25px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 30px
+    @include media-breakpoint-up(md)
+      max-width: 330px
+      margin: 0
+    &__desc
+      .heading
+        margin-bottom: 13px
+    &__img
+      max-width: 99px
+      .img
+        width: 100%
+
+  &.filters
+    display: none
+    @include media-breakpoint-up(xl)
+      display: flex
+    .baners__wrapper
+      padding: 0
+      margin-top: 35px
+    .baners__content
+      flex-direction: column
+      overflow: hidden
+      .baner
+        max-width: 225px
+        margin-bottom: 24px
+        &__img
+          max-width: 116px
+          margin-right: -70px
+        .heading
+          font-size: 21px
+          line-height: 31px
+        .btn
+          max-width: 120px
+          font-size: 13px
+          line-height: 16px
+          padding: 11px 17px
+

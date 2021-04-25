@@ -1,0 +1,19 @@
+include ./button
+
+mixin baners(addClass)
+  div(class=addClass ? 'baners ' + addClass : 'baners')
+    .baners__wrapper
+      .baners__content
+        .baner.jewelry
+          .baner__desc
+            h4.heading.no-uppercase Ювелирные украшения
+            +button('btn-secondary', 'Посмотреть')
+          .baner__img
+            img.img(src="./img/services-jewelry.png", alt="img")
+
+        .baner.coins
+          .baner__desc
+            h4.heading.no-uppercase Монеты
+            +button('btn-secondary', 'Посмотреть')
+          .baner__img
+            img.img(src="./img/services-coins.png", alt="img")

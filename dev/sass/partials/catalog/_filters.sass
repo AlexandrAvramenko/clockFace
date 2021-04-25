@@ -20,6 +20,7 @@
     margin-bottom: 10px
     @include media-breakpoint-up(md)
       width: 246px
+      padding: 11px 0
       margin: 0
     @include media-breakpoint-up(xl)
       display: none
@@ -46,10 +47,21 @@
     @include media-breakpoint-up(xl)
       display: block
       position: static
+      max-height: none
+      margin-top: 25px
     .heading
       display: none
       @include media-breakpoint-up(md)
         display: block
+    .search-brand
+      font-size: 14px
+      line-height: 22px
+      height: 36px
+      text-align: center
+      margin: 5px 0 15px
+      @include media-breakpoint-up(md)
+        font-size: 17px
+        line-height: 25px
   .all-brends
     display: flex
     align-items: center
@@ -61,7 +73,20 @@
   &__accordion-wrapper
     padding: 0 28px
     margin-bottom: 10px
+    .heading
+      margin-bottom: 15px
     .accordion
+      &.price
+        .accordion__heading
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            left: 55px
+            width: 20px
+            height: 20px
+            background: url(../img/ruble.svg) no-repeat
+            background-size: contain
       &__heading
         font-weight: 600
         padding: 6px 0
@@ -70,7 +95,8 @@
         &.filters__heading
           font-weight: 400
       &__content
-        margin-bottom: 0
+        margin-top: 5px;
+        margin-bottom: 15px;
       .divider
         display: none
   .btn-wrapper
@@ -85,3 +111,13 @@
         line-height: 20px
         width: auto
         padding: 7px 16px
+      &.btn-secondary
+        @include media-breakpoint-up(xl)
+          font-size: 17px
+          line-height: 21px
+          width: 100%
+          padding: 12px 40px
+          margin-top: 15px
+      &.btn-primary
+        @include media-breakpoint-up(xl)
+          display: none

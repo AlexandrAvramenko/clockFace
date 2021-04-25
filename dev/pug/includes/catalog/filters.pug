@@ -1,5 +1,6 @@
 include ../../mixins/accordion
 include ../../mixins/checkbox
+include ../../mixins/baners
 
 section.filters
 	.filters__wrapper
@@ -17,18 +18,19 @@ section.filters
 					+checkbox('В наличии')
 					+checkbox('Ожидаемые поступления')
 				+accordion('Бренд')
-					+checkbox('A.Lange & Sohne (3)')
-					+checkbox('Arnold and Son (1)')
-					+checkbox('Audemars Piguet (7)')
-					+checkbox('Baume & Mercier (4)')
-					+checkbox('Bell & Ross (2)')
-					+checkbox('Blancpain (3)')
-					+checkbox('BLU (1)')
-					+checkbox('Bovet (1)')
+					input(type='text' class='search-brand' placeholder='Поиск по брендам')
+					+checkbox('A.Lange & Sohne', '(3)')
+					+checkbox('Arnold and Son', '(1)')
+					+checkbox('Audemars Piguet', '(7)')
+					+checkbox('Baume & Mercier', '(4)')
+					+checkbox('Bell & Ross', '(2)')
+					+checkbox('Blancpain', '(3)')
+					+checkbox('BLU', '(1)')
+					+checkbox('Bovet', '(1)')
 					.all-brends
 						a.link(href="/") Все бренды
 						img(src="./img/chevron.svg", alt="icon")
-				+accordion('Цена')
+				+accordion('Цена', 'price')
 				+accordion('Поступления')
 				+accordion('Состояние')
 				+accordion('Материал')
@@ -38,3 +40,5 @@ section.filters
 			.btn-wrapper
 				+button('btn-secondary', 'Cбросить')
 				+button('btn-primary filters__close', 'Cвернуть')
+		+baners('filters')
+

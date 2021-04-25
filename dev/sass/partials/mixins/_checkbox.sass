@@ -2,20 +2,27 @@
   display: grid
   grid-template-columns: min-content auto
   grid-template-rows: 24px auto
-  grid-gap: 12px
+  grid-gap: 9px
   font-size: 14px
   line-height: 26px
   cursor: pointer
+  @include media-breakpoint-up(md)
+    font-size: 17px
+    line-height: 28px
   &-input
     input
       opacity: 0
-      width: 1em
-      height: 1em
+      width: 14px
+      height: 14px
       margin-top: 4px
+  &-label
+    color: $black67
+    .number
+      color: $black23
   &-control
     display: inline-grid
-    width: 1em
-    height: 1em
+    width: 14px
+    height: 14px
     border: 1px solid $black67
     border-radius: 4px
     background-color: $white
@@ -39,6 +46,7 @@
       &:checked + .checkbox-control
         border: 1px solid $blue
         background-color: $blue
+        color: $blue
         .icon
           transform: scale(1)
       &:hover + .checkbox-control

@@ -2,9 +2,9 @@
   &__wrapper
     padding: 40px 20px
     @include media-breakpoint-up(md)
-      padding: 50px 0
+      padding: 0 0 20px
     @include media-breakpoint-up(xl)
-      padding: 76px 0
+      padding: 43px 0 20px
   &__list
     display: flex
     flex-wrap: wrap
@@ -14,17 +14,19 @@
       margin-left: 0
       margin-right: 0
     .product
-      text-align: center
       width: calc(50% - 12px)
+      padding: 10px 0 3px
       margin-left: 6px
       margin-right: 6px
-      margin-bottom: 28px
+      margin-bottom: 13px
       @include media-breakpoint-up(md)
         width: calc(100% / 3)
+        padding: 36px 0
         margin-left: 0
         margin-right: 0
       @include media-breakpoint-up(xl)
         width: calc(100% / 4)
+        padding: 36px 0 25px
       .img
         max-width: 114px
         @include media-breakpoint-up(md)
@@ -37,13 +39,12 @@
           margin-right: auto
           margin-bottom: 24px
           .icon
-            @include media-breakpoint-up(md)
-              width: 30px
-              height: 30px
-            @include media-breakpoint-up(xl)
-              width: 40px
-              height: 40px
+            display: none
+      .desc-wrapper
+        @include media-breakpoint-up(md)
+          height: 110px
   .btn
     display: flex
+    margin-top: 19px
     margin-left: auto
     margin-right: auto

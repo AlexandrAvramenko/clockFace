@@ -1,7 +1,7 @@
-mixin checkbox(label)
+mixin checkbox(label, number)
     label.checkbox
         span.checkbox-input
             input(type="checkbox" name="checkbox")&attributes(attributes)
             span.checkbox-control
                 img.icon(src="./img/check-bold.svg", alt="icon")
-        span #{label}
+        span.checkbox-label #{label} #[span.number #{number}]
