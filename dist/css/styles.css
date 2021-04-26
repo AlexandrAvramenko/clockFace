@@ -1320,6 +1320,10 @@ p {
       pointer-events: none;
       cursor: default;
       opacity: .3; }
+    .btn-link.btn-primary, .btn-link-secondary {
+      color: #000000; }
+    .btn-link.btn-alt {
+      color: #FFFFFF; }
 
 .checkbox {
   display: grid;
@@ -3413,15 +3417,15 @@ p {
     @media (min-width: 1440px) {
       .subscrition__form-wrapper {
         margin-bottom: 67px; } }
-
-.subscrition__input {
-  margin-bottom: 30px; }
-  @media (min-width: 768px) {
-    .subscrition__input {
-      margin-right: 16px;
-      margin-bottom: 0; } }
+  .subscrition__form .input-wrapper {
+    width: 100%;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .subscrition__form .input-wrapper {
+        margin-right: 16px;
+        margin-bottom: 0; } }
   @media (min-width: 768px) and (min-width: 1440px) {
-    .subscrition__input {
+    .subscrition__form .input-wrapper {
       margin-right: 30px; } }
 
 .subscrition__info-text {

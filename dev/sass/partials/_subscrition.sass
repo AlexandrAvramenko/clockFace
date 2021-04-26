@@ -21,7 +21,7 @@
 			margin-bottom: 64px
 		@include media-breakpoint-up(xl)
 			max-width: 760px
-	&__form	
+	&__form
 		max-width: 562px
 		margin: auto
 		@include media-breakpoint-up(xl)
@@ -35,13 +35,14 @@
 				margin-bottom: 35px
 			@include media-breakpoint-up(xl)
 				margin-bottom: 67px
-	&__input
-		margin-bottom: 30px
-		@include media-breakpoint-up(md)
-			margin-right: 16px
-			margin-bottom: 0
-			@include media-breakpoint-up(xl)
-				margin-right: 30px
+		.input-wrapper
+			width: 100%
+			margin-bottom: 30px
+			@include media-breakpoint-up(md)
+				margin-right: 16px
+				margin-bottom: 0
+				@include media-breakpoint-up(xl)
+					margin-right: 30px
 	&__info-text
 		color: $black67
 		@include media-breakpoint-up(md)
