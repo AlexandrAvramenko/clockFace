@@ -1153,6 +1153,11 @@ p {
 .catalog__heading {
   text-align: center;
   padding: 0 16px; }
+  @media (min-width: 1440px) {
+    .catalog__heading {
+      font-size: 86px;
+      line-height: 105px;
+      letter-spacing: .05em; } }
   .catalog__heading-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
