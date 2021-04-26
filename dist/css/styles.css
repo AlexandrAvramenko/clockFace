@@ -1249,8 +1249,6 @@ p {
     .btn {
       font-size: 17px;
       padding: 12px 40px; } }
-  .btn:focus {
-    outline: 0; }
   .btn:disabled {
     pointer-events: none;
     cursor: default;
