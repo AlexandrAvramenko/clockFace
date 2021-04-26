@@ -2789,8 +2789,12 @@ p {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1;
+      padding: 18px 43px;
       margin-right: 32px;
       margin-bottom: 36px; } }
+  @media (min-width: 1920px) {
+    .card__right .btn {
+      padding: 18px 51px; } }
   @media (min-width: 1440px) {
     .card__right .btn-group {
       display: -webkit-box;
