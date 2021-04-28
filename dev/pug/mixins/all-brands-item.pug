@@ -1,0 +1,7 @@
+mixin all-brands-item(letter, data)
+  .all-brands__item
+    .all-brands__letter #{letter}
+    ul.list
+      each item in data
+        li.item
+          a(href=(item.link) class='all-brands__link') #{item.title} &nbsp;#[span.quantity #{item.quantity}]
