@@ -2,36 +2,37 @@ include ../mixins/list
 include ../mixins/button
 
 -
-	const menu_list = [
-		{title: 'Купить', link: '/'},
-		{title: 'Продать', link: '/'},
-		{title: 'Заложить', link: '/'},
-		{title: 'О нас', link: '/'}
-	]
-	const buy_sale_pledge = [
-		{title: 'Часы', link: '/'},
-		{title: 'Ювелирные изделия', link: '/'},
-		{title: 'Бриллианты', link: '/'},
-		{title: 'Золотые монеты', link: '/'}
-	]
-	const aboutus_list = [
-		{title: 'Услуги', link: '/'},
-		{title: 'Сотрудничество', link: '/'},
-		{title: 'Почему мы', link: '/'},
-		{title: 'Аксессуары', link: '/'},
-		{title: 'Вопрос-Ответ', link: '/'},
-		{title: 'Отзывы', link: '/'}
-	]
-	const menu_small = [
-		{icon: 'sm-phone', url: '/'},
-		{icon: 'sm-whatsapp', url: '/'},
-		{icon: 'sm-telegram', url: '/'}
-	]
-	const mobile_list = [
-		{icon: 'mb-phone', url: '/'},
-		{icon: 'whatsapp', url: '/'},
-		{icon: 'telegram', url: '/'}
-	]
+	const
+		menu_list = [
+			{title: 'Купить', link: '/'},
+			{title: 'Продать', link: '/'},
+			{title: 'Заложить', link: '/'},
+			{title: 'О нас', link: '/'}
+		]
+		buy_sale_pledge = [
+			{title: 'Часы', link: '/'},
+			{title: 'Ювелирные изделия', link: '/'},
+			{title: 'Бриллианты', link: '/'},
+			{title: 'Золотые монеты', link: '/'}
+		]
+		aboutus_list = [
+			{title: 'Услуги', link: '/'},
+			{title: 'Сотрудничество', link: '/'},
+			{title: 'Почему мы', link: '/'},
+			{title: 'Аксессуары', link: '/'},
+			{title: 'Вопрос-Ответ', link: '/'},
+			{title: 'Отзывы', link: '/'}
+		]
+		menu_small = [
+			{icon: 'sm-phone', url: '/'},
+			{icon: 'sm-whatsapp', url: '/'},
+			{icon: 'sm-telegram', url: '/'}
+		]
+		mobile_list = [
+			{icon: 'mb-phone', url: '/'},
+			{icon: 'whatsapp', url: '/'},
+			{icon: 'telegram', url: '/'}
+		]
 
 section.header
 	.overlay
@@ -48,6 +49,10 @@ section.header
 				.header__menu
 					.header__menu-left
 						+list(menu_list, 'list', 'item', true, 'link')
+						//- ul.list
+						//- 	li.item
+						//- 		a.link Купить
+						//- 		+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
 					.header__menu-right
 						.list
 							.item.search
