@@ -3457,6 +3457,75 @@ p {
       border-color: #FFC72B;
       text-decoration: none; }
 
+.sort-control {
+  background: #FFFFFF;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  -webkit-box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.25); }
+  .sort-control__wrapper {
+    padding: 30px 0; }
+  .sort-control__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .sort-control__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 732px;
+    overflow: auto; }
+    .sort-control__list .item-wrapper {
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 100px;
+      min-width: 100px;
+      height: 100px;
+      border-radius: 3px;
+      border: 1px solid #DBDFE5;
+      margin: 0 10px; }
+    .sort-control__list .item img {
+      width: 68px;
+      height: 90px;
+      -o-object-fit: contain;
+         object-fit: contain; }
+    .sort-control__list .item .del-item {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer; }
+      .sort-control__list .item .del-item img {
+        width: 16px;
+        height: 16px; }
+  .sort-control .btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 125px; }
+    .sort-control .btn-wrapper .btn:first-child {
+      margin-bottom: 15px; }
+
 .all-brands__heading {
   text-align: center;
   padding: 0 16px; }

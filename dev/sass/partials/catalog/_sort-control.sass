@@ -1,0 +1,73 @@
+.sort-control
+  background: #FFFFFF
+  position: fixed
+  left: 0
+  bottom: 0
+  width: 100%
+  z-index: 1000
+  box-shadow: 0px -2px 20px rgba(0, 0, 0, 0.25)
+  &__wrapper
+    padding: 30px 0
+
+  &__content
+    display: flex
+    align-items: center
+    justify-content: flex-end
+  &__list
+    display: flex
+    max-width: 732px
+    overflow: auto
+    .item
+      &-wrapper
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100px
+        min-width: 100px
+        height: 100px
+        border-radius: 3px
+        border: 1px solid #DBDFE5
+        margin: 0 10px
+      img
+        width: 68px
+        height: 90px
+        object-fit: contain
+
+      .del-item
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+        img
+          width: 16px
+          height: 16px
+
+  .btn-wrapper
+    display: flex
+    flex-direction: column
+    margin-left: 125px
+    .btn
+      &:first-child
+        margin-bottom: 15px
+
+  // &::-webkit-scrollbar  width: 0px    height: 5px
+
+  // &::-webkit-scrollbar-button   background-color: #b5afaf display:none
+
+  // &::-webkit-scrollbar-track   background-color:#0D2951
+
+  // &::-webkit-scrollbar-track-piece  background-color: #b5afaf
+
+  // &::-webkit-scrollbar-thumb  height: 50px background-color:#0D2951 border-radius: 3px
+
+  // &::-webkit-scrollbar-corner  background-color:#0D2951
+
+  // &::-webkit-resizer  background-color:#0D2951
+
+// .sorting-block .hidden-block::-webkit-scrollbar  width: 0px    height: 0px
+// .sorting-block .hidden-block::-webkit-scrollbar-button   background-color: #b5afafdisplay:none
+// .sorting-block .hidden-block::-webkit-scrollbar-track   background-color:#0D2951
+// .sorting-block .hidden-block::-webkit-scrollbar-track-piece  background-color: #b5afaf
+// .sorting-block .hidden-block::-webkit-scrollbar-thumb  height: 50px background-color:#0D2951 border-radius: 3px
+// .sorting-block .hidden-block::-webkit-resizer  background-color:#0D2951

@@ -188,3 +188,14 @@ $('.price__item').click(function(e) {
   }
   $(this).toggleClass('selected')
 })
+
+// sort-control
+$(".del-item").click(function() {
+	var id = $(this).attr('data-id');
+	$("[data-id="+id+"]").remove();
+});
+
+$(".sort-reset").click(function() {
+	$('.sort-control__list .item').remove();
+	// $('.sorting-col:not(.main-col)').remove();
+});

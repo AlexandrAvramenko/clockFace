@@ -1,0 +1,28 @@
+include ../../mixins/button
+
+-
+	const sortList = [
+		{img: 'adriatica.png'},
+		{img: 'adriatica-2.png'},
+		{img: 'adriatica-3.png'},
+		{img: 'adriatica.png'},
+		{img: 'adriatica-2.png'},
+		{img: 'adriatica-3.png'}
+	]
+
+if sortControl
+	.sort-control
+		.sort-control__wrapper
+			.container
+				.sort-control__content
+					.sort-control__list
+						each item, index in sortList
+							.item-wrapper
+								.item(data-id=index+1)
+									img(src='./img/' + item.img)
+									span.del-item(data-id=index+1)
+										img(src='./img/close.svg')
+
+					.btn-wrapper
+						+button('btn-primary', 'Сравнить', link=true, '/compare')
+						+button('btn-secondary sort-reset', 'Очистить')
