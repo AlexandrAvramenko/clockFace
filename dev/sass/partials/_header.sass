@@ -55,6 +55,96 @@
           text-transform: uppercase
           letter-spacing: .05em
           color: $black
+    &-left
+      @include media-breakpoint-up(xl)
+        .list
+          .item
+            position: relative
+            cursor: pointer
+            border-bottom: 2px solid $white
+            .submenu
+              display: none
+              position: absolute
+              top: 40px
+              left: 0
+              flex-direction: column
+              list-style: none
+              background: $white
+              border-radius: 3px
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+              z-index: 5
+              padding: 20px 40px 30px
+              ul
+                list-style: none
+                padding: 0
+                margin-top: 20px
+              .item
+                &:not(:last-child)
+                  margin-bottom: 15px
+                .heading
+                  border-bottom: 1px solid $blue35
+                  padding-bottom: 6px
+              .link
+                color: $black67
+                text-transform: none
+                white-space: nowrap
+                &:hover
+                  text-decoration: underline
+            &.active
+              border-bottom: 2px solid $yellow
+              .submenu
+                display: flex
+                &.three-col
+                  display: flex
+                  flex-direction: row
+                  left: -494px
+                  width: 1320px
+                  padding: 30px 60px 40px
+                  @include media-breakpoint-up(xxl)
+                    left: -674px
+                    width: 1520px
+                    padding: 30px 200px 40px
+                  li:not(:last-child)
+                    margin-bottom: 15px
+                  .item
+                    font-size: 17px
+                    line-height: 25px
+                    letter-spacing: .08em
+                    text-transform: uppercase
+                    white-space: nowrap
+                    margin-bottom: 0
+                    &:first-child
+                      width: calc(50% - 30px)
+                      padding-right: 30px
+                    &:nth-child(2)
+                      flex-grow: 1
+                      padding-right: 30px
+                    &:last-child
+                      display: flex
+                      flex-grow: 1
+                      flex-direction: column
+                      justify-content: space-between
+                    .quantity
+                      display: inline-flex
+                      justify-content: center
+                      align-items: center
+                      font-size: 13px
+                      line-height: 16px
+                      min-width: 12px
+                      color: $black23
+                      border: 1px solid
+                      padding: 0 2px
+                    .two-col
+                      display: flex
+                      .left
+                        margin-right: 135px
+                        @include media-breakpoint-up(xxl)
+                          margin-right: 184px
+                      .title
+                        font-size: 17px
+                        line-height: 21px
+                        text-transform: none
+                        color: $blue35
     &-right
       @include media-breakpoint-up(xl)
         display: flex
@@ -103,7 +193,7 @@
     @include media-breakpoint-up(md)
       display: none
     &.hidden
-	    display: none
+      display: none
   &__logo
     display: none
     @include media-breakpoint-up(md)
@@ -118,11 +208,10 @@
       margin-right: 53px
     &-wrapper
       &.hidden
-	      display: none
+        display: none
     &-small
       @include media-breakpoint-up(md)
         display: none
-
 
   &__menu-mobile
     display: none

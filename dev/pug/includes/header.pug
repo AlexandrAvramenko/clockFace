@@ -48,11 +48,58 @@ section.header
 							img(src="./img/logo-small.svg", alt="img")
 				.header__menu
 					.header__menu-left
-						+list(menu_list, 'list', 'item', true, 'link')
-						//- ul.list
-						//- 	li.item
-						//- 		a.link Купить
-						//- 		+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
+						ul.list
+							li.item
+								.link Купить
+								+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
+							li.item
+								.link Продать
+								.submenu.three-col
+									.item
+										.heading Часы
+										.two-col
+											ul.left
+												li #[a.link(href="/") Все часы] #[span.quantity 213]
+												li #[a.link(href="/") Все бренды (A-Z)]
+												li #[a.link(href="/") Последние поступления]
+												li #[a.link(href="/") Ожидаемые поступления]
+												li #[a.link(href="/") Мужские часы]
+												li #[a.link(href="/") Женские часы]
+												li #[a.link(href="/") Скидки и акции]
+											ul.right
+												li #[span.title Популярные бренды:]
+												li #[a.link(href="/") Breitling] #[span.quantity 15]
+												li #[a.link(href="/") Cartier] #[span.quantity 10]
+												li #[a.link(href="/") IWC] #[span.quantity 10]
+												li #[a.link(href="/") Omega] #[span.quantity 8]
+												li #[a.link(href="/") Patek Philippe] #[span.quantity 13]
+												li #[a.link(href="/") Rolex] #[span.quantity 25]
+									.item
+										.heading Ювелирные изделия
+										ul
+											li #[a.link(href="/") Все украшения] #[span.quantity 20]
+											li #[a.link(href="/") Все бренды (A-Z)]
+											li #[a.link(href="/") Кольца]
+											li #[a.link(href="/") Серьги]
+											li #[a.link(href="/") Кулон-подвески]
+											li #[a.link(href="/") Браслеты]
+											li #[a.link(href="/") Колье]
+									.item
+										.top
+											.heading Бриллианты
+											ul
+												li #[a.link(href="/") Все изделия с бриллиантами] #[span.quantity 9]
+										.bottom
+											.heading Монеты
+											ul
+												li #[a.link(href="/") Все монеты] #[span.quantity 34]
+												li #[a.link(href="/") Золотые монеты]
+												li #[a.link(href="/") Платиновые монеты]
+							li.item
+								a.link(href='/') Заложить
+							li.item
+								.link О нас
+								+list(aboutus_list, 'submenu one-col', 'item', true, 'link')
 					.header__menu-right
 						.list
 							.item.search

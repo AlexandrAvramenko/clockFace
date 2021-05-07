@@ -8,13 +8,13 @@ $(".header__burger").click(function () {
   // $("body").css("overflow-y","hidden")
 });
 
-// $(".header__menu-left .item > a").click(function() {
-// 	$('.header__menu-left .item > a').not(this).removeClass('active');
-//     $(this).toggleClass('active');
+$(".header__menu-left .item").click(function() {
+	$('.header__menu-left .item').not(this).removeClass('active');
+    $(this).toggleClass('active');
 
-// 	$('.submenu').removeClass("active");
-// 	$(this).next('.submenu').addClass('active');
-// });
+	$('.submenu').removeClass("active");
+	$(this).next('.submenu').addClass('active');
+});
 
 //dropdown
 $('.search').click(function () {
