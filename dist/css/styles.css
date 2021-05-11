@@ -2720,6 +2720,7 @@ p {
     .card__left .slider-wrapper {
       margin-left: 130px; } }
   .card__left .slider-wrapper .slide {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2727,7 +2728,17 @@ p {
         -ms-flex-pack: center;
             justify-content: center; }
     .card__left .slider-wrapper .slide .img {
-      width: 350px; }
+      width: 330px; }
+    .card__left .slider-wrapper .slide .icon {
+      display: none; }
+      @media (min-width: 1440px) {
+        .card__left .slider-wrapper .slide .icon {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 40px;
+          height: 40px; } }
   @media (min-width: 1440px) {
     .card__left .slider-wrapper .slick-dots {
       display: -webkit-box;

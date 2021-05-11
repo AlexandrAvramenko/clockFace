@@ -33,10 +33,20 @@
       @include media-breakpoint-up(xl)
         margin-left: 130px
       .slide
+        position: relative
         display: flex
         justify-content: center
         .img
-          width: 350px
+          width: 330px
+        .icon
+          display: none
+          @include media-breakpoint-up(xl)
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            width: 40px
+            height: 40px
       .slick-dots
         @include media-breakpoint-up(xl)
           display: flex

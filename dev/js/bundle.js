@@ -98,6 +98,15 @@ $(".slider-card").slick({
   prevArrow: "<img src='./img/arrow-left.svg' class='prev' alt='prev'>",
   nextArrow: "<img src='./img/arrow-right.svg' class='next' alt='next'>",
   dots: true,
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        prevArrow: false,
+        nextArrow: false
+      }
+    }
+  ]
 });
 
 // btn-up
