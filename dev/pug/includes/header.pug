@@ -50,9 +50,6 @@ section.header
 					.header__menu-left
 						ul.list
 							li.item
-								.link Купить
-								+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
-							li.item
 								.link Продать
 								.submenu.three-col
 									.item
@@ -95,6 +92,9 @@ section.header
 												li #[a.link(href="/") Все монеты] #[span.quantity 34]
 												li #[a.link(href="/") Золотые монеты]
 												li #[a.link(href="/") Платиновые монеты]
+							li.item
+								.link Купить
+								+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
 							li.item
 								a.link(href='/') Заложить
 							li.item

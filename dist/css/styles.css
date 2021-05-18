@@ -811,12 +811,12 @@ p {
               -webkit-box-direction: normal;
                   -ms-flex-direction: row;
                       flex-direction: row;
-              left: -494px;
+              left: -397px;
               width: 1320px;
               padding: 30px 60px 40px; } }
         @media (min-width: 1440px) and (min-width: 1920px) {
           .header__menu-left .list .item.active .submenu.three-col {
-            left: -674px;
+            left: -551px;
             width: 1520px;
             padding: 30px 200px 40px; } }
     @media (min-width: 1440px) {
