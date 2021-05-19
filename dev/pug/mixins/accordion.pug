@@ -1,7 +1,7 @@
 mixin accordion(heading, styledAddCls)
     div(class=styledAddCls ? 'accordion ' + styledAddCls : 'accordion')
         .accordion__heading #{heading}
-            img.icon(src='./img/chevron.svg')
+            img.icon(src='./img/chevron.svg', alt="icon")
         .accordion__content
             block
         .divider

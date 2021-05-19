@@ -19,9 +19,9 @@ if sortControl
 						each item, index in sortList
 							.item-wrapper
 								.item(data-id=index+1)
-									img(src='./img/' + item.img)
+									img(src='./img/' + item.img, alt="img")
 									span.del-item(data-id=index+1)
-										img(src='./img/close.svg')
+										img(src='./img/close.svg', alt="icon")
 
 					.btn-wrapper
 						+button('btn-primary', 'Сравнить', link=true, '/compare')
