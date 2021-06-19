@@ -4,15 +4,26 @@ mixin product(data, slider)
 			.img-wrapper
 				img.img(src='./img/' + item.img, alt="img")
 				if item.like
-					img.icon.icon-like(src='./img/' + item.like, alt="icon")
+					.icon-wrapper.like
+						img.icon(src='./img/' + item.like, alt="icon")
+						.tooltip В избранное
+				if item.liked
+					.icon-wrapper.liked
+						img.icon(src='./img/' + item.liked, alt="icon")
 				if item.compare
-					img.icon.icon-compare(src='./img/' + item.compare, alt="icon")
+					.icon-wrapper.compare
+						img.icon(src='./img/' + item.compare, alt="icon")
+						.tooltip Сравнить
 				if item.docs
-					img.icon.icon-docs(src='./img/' + item.docs, alt="icon")
+					.icon-wrapper.docs
+						img.icon(src='./img/' + item.docs, alt="icon")
+						.tooltip Документы в комплекте
 				if item.pack
-					img.icon.icon-pack(src='./img/' + item.pack, alt="icon")
+					.icon-wrapper.pack
+						img.icon(src='./img/' + item.pack, alt="icon")
+						.tooltip Коробка в комплекте
 			.desc-wrapper
-				h6.name #{item.name}
+				h6.normal.name #{item.name}
 				.text-xs.model #{item.model}
 				.price-wrapper
 					.price #{item.price}

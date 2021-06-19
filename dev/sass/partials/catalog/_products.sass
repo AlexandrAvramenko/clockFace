@@ -1,6 +1,6 @@
 .products
   &__wrapper
-    padding: 40px 20px
+    padding: 0 20px 40px
     @include media-breakpoint-up(md)
       padding: 0 0 20px
     @include media-breakpoint-up(xl)
@@ -11,35 +11,40 @@
     margin-left: -6px
     margin-right: -6px
     @include media-breakpoint-up(md)
+      margin-left: -1px
+      margin-right: -1px
+    @include media-breakpoint-up(xl)
       margin-left: 0
       margin-right: 0
     .product
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
       width: calc(50% - 12px)
-      padding: 10px 0 3px
+      min-height: 285px
       margin-left: 6px
       margin-right: 6px
       margin-bottom: 13px
       @include media-breakpoint-up(md)
-        width: calc(100% / 3)
-        padding: 36px 0
-        margin-left: 0
-        margin-right: 0
+        width: calc((100% - 6px)/ 3)
+        min-height: 500px
+        padding: 0
+        margin-left: 1px
+        margin-right: 1px
+        margin-bottom: 10px
       @include media-breakpoint-up(xl)
         width: calc(100% / 4)
-        padding: 36px 0 25px
+        margin-left: 0
+        margin-right: 0
       .img
-        max-width: 114px
+        max-width: 107px
+        max-height: 178px
         @include media-breakpoint-up(md)
-          max-width: 180px
-        @include media-breakpoint-up(xl)
-          max-width: 220px
+          max-width: 190px
+          max-height: 288px
         &-wrapper
           width: 100%
-          margin-left: auto
-          margin-right: auto
-          margin-bottom: 24px
-          .icon
-            display: none
+          margin: auto
       .desc-wrapper
         @include media-breakpoint-up(md)
           height: 110px

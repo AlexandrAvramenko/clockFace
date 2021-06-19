@@ -13,7 +13,7 @@
     font-weight: 400
     background: $yellow
     border-radius: 3px
-    width: 280px
+    width: 220px
     padding: 6px 0
     margin-left: auto
     margin-right: auto
@@ -38,14 +38,15 @@
     @include media-breakpoint-up(md)
       background: $white
       position: relative
+      width: 246px
       z-index: 1
       max-height: 744px
       overflow-y: auto
       padding: 15px 0
       margin-top: 15px
-      margin-left: -20px
     @include media-breakpoint-up(xl)
       display: block
+      width: 225px
       position: static
       max-height: none
       margin-top: 25px
@@ -73,6 +74,10 @@
   &__accordion-wrapper
     padding: 0 28px
     margin-bottom: 10px
+    @include media-breakpoint-up(md)
+      padding: 0 10px 0 0
+    @include media-breakpoint-up(xl)
+      padding: 0
     .heading
       margin-bottom: 15px
     .accordion
