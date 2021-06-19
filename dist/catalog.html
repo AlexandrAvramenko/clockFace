@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
@@ -297,6 +298,13 @@
                                     <div class="accordion price">
                                       <div class="accordion__heading">Цена<img class="icon" src="./img/chevron.svg" alt="icon"></div>
                                       <div class="accordion__content">
+                                        <div class="price-range">
+                                          <div class="price-range-fields">
+                                            <input class="price-range-field" type="number" min="0" max="9900" oninput="validity.valid||(value='0');" id="min_price"><span class="dash">&mdash;</span>
+                                            <input class="price-range-field" type="number" min="0" max="10000" oninput="validity.valid||(value='10000');" id="max_price">
+                                          </div>
+                                          <div class="price-filter-range" id="slider-range" name="rangeInput"></div>
+                                        </div>
                                       </div>
                                       <div class="divider"></div>
                                     </div>
@@ -572,37 +580,6 @@
                                 </div>
                               </div>
                             </div>
-              <div class="sort-control">
-                <div class="sort-control__wrapper">
-                  <div class="container">
-                    <div class="sort-control__content">
-                      <div class="sort-control__list">
-                        <div class="item-wrapper">
-                          <div class="item" data-id="1"><img src="./img/adriatica.png" alt="img"><span class="del-item" data-id="1"><img src="./img/close.svg" alt="icon"></span></div>
-                        </div>
-                        <div class="item-wrapper">
-                          <div class="item" data-id="2"><img src="./img/adriatica-2.png" alt="img"><span class="del-item" data-id="2"><img src="./img/close.svg" alt="icon"></span></div>
-                        </div>
-                        <div class="item-wrapper">
-                          <div class="item" data-id="3"><img src="./img/adriatica-3.png" alt="img"><span class="del-item" data-id="3"><img src="./img/close.svg" alt="icon"></span></div>
-                        </div>
-                        <div class="item-wrapper">
-                          <div class="item" data-id="4"><img src="./img/adriatica.png" alt="img"><span class="del-item" data-id="4"><img src="./img/close.svg" alt="icon"></span></div>
-                        </div>
-                        <div class="item-wrapper">
-                          <div class="item" data-id="5"><img src="./img/adriatica-2.png" alt="img"><span class="del-item" data-id="5"><img src="./img/close.svg" alt="icon"></span></div>
-                        </div>
-                        <div class="item-wrapper">
-                          <div class="item" data-id="6"><img src="./img/adriatica-3.png" alt="img"><span class="del-item" data-id="6"><img src="./img/close.svg" alt="icon"></span></div>
-                        </div>
-                      </div>
-                      <div class="btn-wrapper"><a class="btn btn-link btn-primary" href="/compare">Сравнить</a>
-                                      <button class="btn btn-secondary sort-reset" type="button">Очистить</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -668,5 +645,7 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/price-range.min.js"></script>
   <script src="js/bundle.min.js"></script>
 </html>

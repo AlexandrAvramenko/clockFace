@@ -147,6 +147,16 @@ input
 			font-size: 21px
 			line-height: 28px
 
+input[type=number]
+  appearance: none
+  -moz-appearance: textfield
+  &:hover, &:focus
+    -moz-appearance: number-input
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button
+    -webkit-appearance: none
+    margin: 0
+
 // input[file]
 .field-file
 	position: relative
