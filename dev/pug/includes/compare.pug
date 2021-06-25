@@ -1,10 +1,69 @@
+
+-
+	const compareData = [
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '46 900 ₽', oldPrise: '59 900 ₽'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '46 900 ₽', oldPrise: '59 900 ₽'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '46 900 ₽'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '46 900 ₽', oldPrise: '59 900 ₽'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '46 900 ₽'},
+		{img:'adriatica-3.png', name: 'Adriatica', model: 'Aviation A8186.5217Q', price: '46 900 ₽', oldPrise: '59 900 ₽'}
+
+	]
+
+	const properties = [
+		{box: 'Есть', docs: 'Есть', corps: 'Серебро', diameter: '40cm', box: 'Есть', docs: 'Есть'},
+		{box: 'Есть', docs: 'Есть', corps: 'Серебро', diameter: '40cm', box: 'Есть', docs: 'Есть'},
+		{box: 'Есть', docs: 'Есть', corps: 'Серебро', diameter: '40cm', box: 'Есть', docs: 'Есть'},
+		{box: 'Есть', docs: 'Есть', corps: 'Серебро', diameter: '40cm', box: 'Есть', docs: 'Есть'},
+		{box: 'Есть', docs: 'Есть', corps: 'Серебро', diameter: '40cm', box: 'Есть', docs: 'Есть'},
+		{box: 'Есть', docs: 'Есть', corps: 'Серебро', diameter: '40cm', box: 'Есть', docs: 'Есть'}
+	]
+
 section.compare
 	.compare__wrapper
 		.container
-      .compare__content
-        .compare__head
-          .aside
-          .content
-        .compare__body
-          .aside
-          .content
+			.compare__content
+				.compare__head
+					.compare__col.main-col
+						.aside
+							h4.no-uppercase.title Сравнение моделей
+							+button('btn-secondary', 'Назад', link=true, '/')
+					.hidden-block
+						each item, index in compareData
+							.compare__col(data-id=index+1)
+								.compare__product
+									.img-wrapper #[img(class='img' src='./img/' + item.img alt="img")]
+									span(class="del-item" data-id=index+1) #[img(class='icon' src="./img/close.svg" alt="icon")]
+									.desc-wrapper
+										h6.normal.name #{item.name}
+										.model #{item.model}
+										.price-wrapper
+											.price #{item.price}
+											.price-old #{item.oldPrise}
+
+				.external-scroll_x
+					.scroll-element_outer
+						.scroll-element_size
+						.scroll-element_track
+						.scroll-bar
+
+				.compare__body
+					.compare__col.main-col
+						.aside
+							.properties
+								div КОРОБКА
+								div ДОКУМЕНТЫ
+								div КОРПУС
+								div ДИАМЕТР
+								div КОРОБКА
+								div ДОКУМЕНТЫ
+					.hidden-block
+						each item, index in properties
+							.compare__col(data-id=index+1)
+								.properties
+									div #{item.box}
+									div #{item.docs}
+									div #{item.corps}
+									div #{item.diameter}
+									div #{item.box}
+									div #{item.docs}

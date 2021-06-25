@@ -206,8 +206,16 @@ $(".del-item").click(function() {
 
 $(".sort-reset").click(function() {
 	$('.sort-control__list .item').remove();
-	// $('.sorting-col:not(.main-col)').remove();
+	$('.compare-col:not(.main-col)').remove();
 });
+
+jQuery('.hidden-block').scrollbar({
+  "autoScrollSize": false,
+  "scrollx": $('.external-scroll_x'),
+
+});
+
+
 
 // slider-range
 $("#slider-range").slider({

@@ -1,0 +1,162 @@
+@include media-breakpoint-up(xl)
+  .compare
+    &__content
+      position: relative
+      .hidden-block
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        margin-right: calc((100vw - 100% - 17px) / -2)
+        overflow: auto
+        padding-bottom: 10px
+        pointer-events: none
+
+        &::-webkit-scrollbar
+          width: 0px
+          height: 0px
+        &::-webkit-scrollbar-button
+          background-color: $blue
+          display: none
+        &::-webkit-scrollbar-track
+          background-color: $blue
+        &::-webkit-scrollbar-track-piece
+          background-color: $blue
+        &::-webkit-scrollbar-thumb
+          height: 50px
+          background-color: $blue
+          border-radius: 3px
+        &::-webkit-resizer
+          background-color: $blue
+
+    &__head, &__body
+      display: flex
+      justify-content: flex-start
+      align-items: flex-start
+      .compare__col
+        width: 210px
+        min-width: 210px
+        text-align: center
+        .aside
+          .title
+            letter-spacing: 0.01em
+            color: $blue
+            margin-top: 30px
+            margin-bottom: 25px
+
+        &.main-col
+          width: 225px
+          min-width: 225px
+          text-align: left
+
+    &__head
+      margin-bottom: 50px
+      .compare__col
+        height: 500px
+        .aside
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: flex-start
+          min-height: 390px
+          margin-bottom: 110px
+
+    &__product
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      min-height: 500px
+      margin-bottom: 10px
+      .img-wrapper
+        margin: auto
+        .img
+          max-width: 190px
+          max-height: 288px
+          object-fit: contain
+
+      .del-item
+        position: absolute
+        top: 6px
+        right: 6px
+        cursor: pointer
+        pointer-events: all
+        .icon
+          width: 15px
+
+      .desc-wrapper
+        height: 110px
+
+        .name
+          font-size: 17px
+          line-height: 25px
+          text-align: center
+          letter-spacing: 0.08em
+          text-transform: uppercase
+          color: $black
+
+        .model
+          font-size: 13px
+          line-height: 22px
+          text-align: center
+          color: $black50
+
+        .price
+          font-weight: 600
+          font-size: 21px
+          line-height: 31px
+          text-align: center
+          letter-spacing: 0.01em
+          color: $blue
+          margin: 3px 0 0
+          &-wrapper
+            height: 74px
+          &-old
+            font-size: 13px
+            line-height: 23px
+            text-align: center
+            text-decoration-line: line-through
+            color: $blue50
+
+  .properties div
+    font-size: 17px
+    line-height: 25px
+    color: $blue
+    padding: 12px 0
+    border-bottom: 1px solid $blue15
+
+  // external-scroll
+  .external-scroll_x,
+  .external-scroll_y
+    border-top: solid 1px $blue
+    cursor: pointer
+    display: none
+    position: absolute
+  .external-scroll_x
+    &.scroll-scrollx_visible
+      display: block
+      height: 15px
+      left: 225px
+      top: 520px
+      right: calc((100vw - 100% - 17px) / -2)
+    .scroll-bar
+      width: 300px
+  .external-scroll_y
+    &.scroll-scrolly_visible
+      display: block
+      height: 200px
+      left: 610px
+      top: 0
+      width: 10px
+    .scroll-bar
+      height: 100px
+  .external-scroll_x div,
+  .external-scroll_y div
+    height: 100%
+    left: 0
+    top: 0
+    position: absolute
+    width: 100%
+  .external-scroll_x .scroll-bar,
+  .external-scroll_y .scroll-bar
+    background: $blue
+    z-index: 12
