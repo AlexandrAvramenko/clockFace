@@ -2332,7 +2332,7 @@ p {
     .product .price-old {
       font-size: 10px;
       line-height: 12px;
-      color: #A1A1A1;
+      color: #8694A8;
       text-decoration: line-through; }
       @media (min-width: 768px) {
         .product .price-old {
