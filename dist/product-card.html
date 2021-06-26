@@ -292,15 +292,23 @@
           </div>
         </div>
       </section>
-            <div class="modal">
+            <div class="modal price-changes">
               <div class="close-modal"><img src="./img/close.svg" alt="icon"></div>
               <div class="modal__content">
-                <div class="image"><img src="./img/modal-preview.png" alt="img"></div>
                 <div class="heading__wrapper">
-                  <div class="heading">Зарезервировать</div>
-                  <div class="subheading">Franck Muller Long Island</div>
+                  <h3 class="heading normal">Сообщить об изменении цены</h3>
                 </div>
-                <div class="description">Вы можете заразервировать часы на срок до 7 дней. Здесь могут быть еще какие-то условия резерва. Вы свободны ото всех финансовых обязательств. Мы перезвоним вам в ближайшее время.</div>
+                <div class="desc">
+                  <div class="image__wrapper">
+                    <div class="image"><img src="./img/modal-preview.png" alt="img"></div>
+                  </div>
+                  <div class="subheading">Franck Muller Long Island<span class="comma">,&nbsp;</span>
+                    <div class="price-wrapper">
+                      <div class="price">180 000 ₽</div>
+                      <div class="price-old">190 000 ₽</div>
+                    </div>
+                  </div>
+                </div>
                 <form class="form">
                   <div class="input-wrapper">
                     <input class="inp" type="text" name="name" id="name">
@@ -313,13 +321,15 @@
                   <div class="input-wrapper">
                     <input class="inp" type="text" name="email" id="email">
                     <label for="email">E-mail</label>
-                  </div><a class="btn btn-link btn-alt btn-lg" href="/">Зарезервировать</a>
+                  </div><a class="btn btn-link btn-alt btn-lg" href="/">Сообщить</a>
                 </form>
+                <div class="policy-wrapper">
+                  <div class="policy">* Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности»</div>
+                  <div class="protection">Защита от спама reCAPTCHA. Конфиденциальность и Условия использования</div>
+                </div>
               </div>
-              <div class="policy">* Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности»</div>
-              <div class="protection">Защита от спама reCAPTCHA. Конфиденциальность и Условия использования</div>
+              <div class="overlay"></div>
             </div>
-            <div class="overlay"></div>
       <section class="more-info">
         <div class="more-info__wrapper">
           <div class="container">

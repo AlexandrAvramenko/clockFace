@@ -17,7 +17,7 @@
 		max-height: 535px
 		padding: 60px 45px 30px
 	@include media-breakpoint-up(xl)
-			max-height: 555px
+		max-height: 555px
 	.close-modal
 		position: absolute
 		right: 20px
@@ -28,96 +28,139 @@
 				width: 40px
 				height: 40px
 	.modal__content
+		position: relative
 		display: flex
 		align-items: flex-end
 		justify-content: space-around
 		flex-flow: row wrap
-		.image
-			width: 70px
-			@include media-breakpoint-up(md)
-				position: absolute
-				top: 40px
-				left: 70px
-				width: 90px
-			@include media-breakpoint-up(xl)
-				left: 90px
-			img
-				width: 100%
+		@include media-breakpoint-up(md)
+			max-width: 770px
+			margin-left: auto
+			margin-right: auto
+
 		.heading__wrapper
-			order: -1
 			width: 100%
 			margin-bottom: 22px
-			@include media-breakpoint-up(md)
-				margin-bottom: 50px
 			.heading
-				font-size: 26px
-				line-height: 32px
-				font-weight: 600
 				text-align: center
-				letter-spacing: .05em
-				text-transform: uppercase
 				color: $blue
 				@include media-breakpoint-up(md)
-					font-size: 36px
-					line-height: 46px
-				@include media-breakpoint-up(xl)
-					font-size: 42px
-					line-height: 51px
+					margin-bottom: 15px
+		.desc
+			display: flex
+			align-items: center
+			background: $lightGrey
+			border-radius: 2px
+			width: 100%
+			padding: 10px 13px
+			@include media-breakpoint-up(md)
+				background: none
+				padding: 0
+			.image__wrapper
+				@include media-breakpoint-up(md)
+					position: absolute
+					bottom: 178px
+					left: 0
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 214px
+					height: 230px
+					background: $lightGrey
+					border-radius: 2px
+					@include media-breakpoint-up(xl)
+						bottom: 198px
+				.image
+					max-width: 65px
+					max-height: 72px
+					@include media-breakpoint-up(md)
+						max-width: 132px
+						max-height: 150px
+					img
+						width: 100%
+
 			.subheading
-				font-weight: 700
 				font-size: 14px
 				line-height: 21px
+				font-weight: 700
 				letter-spacing: .01em
 				color: $black
-				text-align: center
+				margin-left: 10px
 				@include media-breakpoint-up(md)
 					font-size: 21px
 					line-height: 31px
-				@include media-breakpoint-up(xl)
-					font-size: 29px
-					line-height: 39px
-		.description
-			width: calc(100% - 95px)
+					text-align: center
+					width: 100%
+					white-space: nowrap
+					margin-left: 0
+				.price
+					font-size: 14px
+					line-height: 21px
+					letter-spacing: .01em
+					font-weight: bold
+					color: $black
+					@include media-breakpoint-up(md)
+						font-size: 21px
+						line-height: 31px
+					&-wrapper
+						height: 40px
+						margin-top: auto
+						@include media-breakpoint-up(md)
+							display: inline-flex
+							align-items: baseline
+					&-old
+						font-size: 10px
+						line-height: 12px
+						color: $black37
+						text-decoration: line-through
+						@include media-breakpoint-up(md)
+							font-size: 13px
+							line-height: 23px
+							margin-left: 10px
+		.info
 			font-size: 12px
 			line-height: 18px
-			align-self: center
+			text-align: center
+			margin-top: 15px
 			@include media-breakpoint-up(md)
 				font-size: 14px
 				line-height: 22px
-				max-width: 215px
-				align-self: flex-start
-				margin-right: 20px
+				max-width: 575px
+				margin-left: auto
+				margin-right: auto
 			@include media-breakpoint-up(xl)
-					font-size: 17px
-					line-height: 25px
+				font-size: 17px
+				line-height: 25px
+				max-width: 600px
 		.form
 			width: 100%
-			margin: 30px 0 20px
+			margin: 15px 0 20px
 			@include media-breakpoint-up(md)
 				width: calc(100% - 235px)
-				margin-top: 0
-				margin-bottom: 30px
+				margin: 30px 0 30px auto
 			@include media-breakpoint-up(xl)
 				margin-bottom: 40px
 			.btn
-				width: 280px
+				width: 100%
+				max-width: 290px
+				box-sizing: border-box
 				@include media-breakpoint-up(md)
 					width: auto
 					margin-top: 10px
 				@include media-breakpoint-up(xl)
 					margin-top: 20px
 
+	.policy-wrapper
+		min-height: 54px
 	.policy,.protection
 		font-size: 12px
 		line-height: 18px
 		text-align: center
-		color: $black
-		@include media-breakpoint-up(md)
-			olor: $black50
+		color: $black50
 	.protection
-		display: none
-		@include media-breakpoint-up(md)
-			display: block
+		@include media-breakpoint-down(sm)
+			display: none
+
 .overlay
 	z-index: 1190
 	position: fixed
@@ -127,4 +170,3 @@
 	top: 0
 	left: 0
 	display: none
-
