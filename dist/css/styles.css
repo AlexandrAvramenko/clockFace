@@ -2324,7 +2324,8 @@ p {
     .product .desc-wrapper .model {
       color: #808080;
       height: 34px;
-      margin-bottom: 6px; }
+      margin-bottom: 6px;
+      overflow: hidden; }
       @media (min-width: 768px) {
         .product .desc-wrapper .model {
           height: 44px; } }
