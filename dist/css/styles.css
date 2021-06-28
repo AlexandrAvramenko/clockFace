@@ -2201,8 +2201,9 @@ p {
   -webkit-transition: .3s ease;
   -o-transition: .3s ease;
   transition: .3s ease; }
-  .product:hover .img-wrapper .icon-wrapper {
-    display: block; }
+  @media (min-width: 1440px) {
+    .product:hover .img-wrapper .icon-wrapper {
+      display: block; } }
   .product .img {
     width: 100%;
     max-width: 188px; }

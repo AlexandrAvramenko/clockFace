@@ -4,7 +4,8 @@
   &:hover
     .img-wrapper
       .icon-wrapper
-        display: block
+        @include media-breakpoint-up(xl)
+          display: block
   .img
     width: 100%
     max-width: 188px
