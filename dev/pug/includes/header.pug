@@ -51,6 +51,9 @@ section.header
 						ul.list
 							li.item
 								.link Продать
+								+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
+							li.item
+								.link Купить
 								.submenu.three-col
 									.item
 										.heading Часы
@@ -92,9 +95,6 @@ section.header
 												li #[a.link(href="/") Все монеты] #[span.quantity 34]
 												li #[a.link(href="/") Золотые монеты]
 												li #[a.link(href="/") Платиновые монеты]
-							li.item
-								.link Купить
-								+list(buy_sale_pledge, 'submenu one-col', 'item', true, 'link')
 							li.item
 								a.link(href='/') Заложить
 							li.item
