@@ -1,6 +1,9 @@
 .product
   text-align: center
   transition: .3s ease
+  min-height: 285px
+  @include media-breakpoint-up(md)
+    min-height: 475px
   &:hover
     .img-wrapper
       .icon-wrapper
@@ -16,7 +19,7 @@
       display: flex
       justify-content: center
       width: 188px
-      margin-bottom: 36px
+      margin: auto
       @include media-breakpoint-up(md)
         width: 268px
       @include media-breakpoint-up(xl)
@@ -92,28 +95,37 @@
     width: 100%
     height: 90px
     @include media-breakpoint-up(md)
-      height: 134px
-  .model
-    color: $black50
-  .price
-    letter-spacing: .01em
-    font-size: 14px
-    line-height: 21px
-    font-weight: bold
-    color: $blue
-    @include media-breakpoint-up(md)
-      font-size: 21px
-      line-height: 31px
-    &-wrapper
-      height: 40px
-      margin-top: auto
+      height: 155px
+
+    .name
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+
+    .model
+      color: $black50
+      height: 34px
+      margin-bottom: 6px
       @include media-breakpoint-up(md)
-        height: 74px
-    &-old
-      font-size: 10px
-      line-height: 12px
-      color: $blue50
-      text-decoration: line-through
+        height: 44px
+    .price
+      letter-spacing: .01em
+      font-size: 14px
+      line-height: 21px
+      font-weight: bold
+      color: $blue
       @include media-breakpoint-up(md)
-        font-size: 13px
-        line-height: 23px
+        font-size: 21px
+        line-height: 31px
+      &-wrapper
+        height: 40px
+        @include media-breakpoint-up(md)
+          height: 74px
+      &-old
+        font-size: 10px
+        line-height: 12px
+        color: $blue50
+        text-decoration: line-through
+        @include media-breakpoint-up(md)
+          font-size: 13px
+          line-height: 23px

@@ -2200,7 +2200,11 @@ p {
   text-align: center;
   -webkit-transition: .3s ease;
   -o-transition: .3s ease;
-  transition: .3s ease; }
+  transition: .3s ease;
+  min-height: 285px; }
+  @media (min-width: 768px) {
+    .product {
+      min-height: 475px; } }
   @media (min-width: 1440px) {
     .product:hover .img-wrapper .icon-wrapper {
       display: block; } }
@@ -2219,7 +2223,7 @@ p {
           -ms-flex-pack: center;
               justify-content: center;
       width: 188px;
-      margin-bottom: 36px; }
+      margin: auto; }
       @media (min-width: 768px) {
         .product .img-wrapper {
           width: 268px; } }
@@ -2311,34 +2315,43 @@ p {
     height: 90px; }
     @media (min-width: 768px) {
       .product .desc-wrapper {
-        height: 134px; } }
-  .product .model {
-    color: #808080; }
-  .product .price {
-    letter-spacing: .01em;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: bold;
-    color: #0D2951; }
-    @media (min-width: 768px) {
-      .product .price {
-        font-size: 21px;
-        line-height: 31px; } }
-    .product .price-wrapper {
-      height: 40px;
-      margin-top: auto; }
+        height: 155px; } }
+    .product .desc-wrapper .name {
+      white-space: nowrap;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis; }
+    .product .desc-wrapper .model {
+      color: #808080;
+      height: 34px;
+      margin-bottom: 6px; }
       @media (min-width: 768px) {
-        .product .price-wrapper {
-          height: 74px; } }
-    .product .price-old {
-      font-size: 10px;
-      line-height: 12px;
-      color: #8694A8;
-      text-decoration: line-through; }
+        .product .desc-wrapper .model {
+          height: 44px; } }
+    .product .desc-wrapper .price {
+      letter-spacing: .01em;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: bold;
+      color: #0D2951; }
       @media (min-width: 768px) {
-        .product .price-old {
-          font-size: 13px;
-          line-height: 23px; } }
+        .product .desc-wrapper .price {
+          font-size: 21px;
+          line-height: 31px; } }
+      .product .desc-wrapper .price-wrapper {
+        height: 40px; }
+        @media (min-width: 768px) {
+          .product .desc-wrapper .price-wrapper {
+            height: 74px; } }
+      .product .desc-wrapper .price-old {
+        font-size: 10px;
+        line-height: 12px;
+        color: #8694A8;
+        text-decoration: line-through; }
+        @media (min-width: 768px) {
+          .product .desc-wrapper .price-old {
+            font-size: 13px;
+            line-height: 23px; } }
 
 .breadcrumbs {
   display: none; }
@@ -4209,7 +4222,6 @@ p {
         -ms-flex-pack: end;
             justify-content: flex-end;
     width: calc(50% - 12px);
-    min-height: 285px;
     margin-left: 6px;
     margin-right: 6px;
     margin-bottom: 13px; }
@@ -4234,11 +4246,7 @@ p {
           max-width: 190px;
           max-height: 288px; } }
       .products__list .product .img-wrapper {
-        width: 100%;
-        margin: auto; }
-    @media (min-width: 768px) {
-      .products__list .product .desc-wrapper {
-        height: 110px; } }
+        width: 100%; }
 
 .products .btn {
   display: -webkit-box;
@@ -4957,19 +4965,25 @@ p {
       .compare__product .del-item .icon {
         width: 15px; }
     .compare__product .desc-wrapper {
-      height: 110px; }
+      height: 134px; }
       .compare__product .desc-wrapper .name {
         font-size: 17px;
         line-height: 25px;
         text-align: center;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: #000000; }
+        color: #000000;
+        white-space: nowrap;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis; }
       .compare__product .desc-wrapper .model {
         font-size: 13px;
         line-height: 22px;
         text-align: center;
-        color: #808080; }
+        color: #808080;
+        height: 44px;
+        overflow: hidden; }
       .compare__product .desc-wrapper .price {
         font-weight: 600;
         font-size: 21px;
