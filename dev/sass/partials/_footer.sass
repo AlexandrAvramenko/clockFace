@@ -6,87 +6,157 @@
     @include media-breakpoint-up(xl)
       padding: 76px 0 82px
   &__content
-    position: relative
     display: flex
+    flex-direction: column-reverse
+    @include media-breakpoint-up(md)
+      flex-direction: row
 
     .left-side
       display: flex
-      flex-direction: column
-      justify-content: space-between
       @include media-breakpoint-down(sm)
-        width: 100%
-        height: 205px
         align-items: center
+        flex-direction: row-reverse
+        margin: auto
       @include media-breakpoint-up(md)
-        width: 50%
-        margin-right: 72px
+        width: calc(50% - 58px)
+        flex-direction: column
+        justify-content: space-between
+        padding-left: 58px
       @include media-breakpoint-up(xl)
-        width: auto
-        flex-grow: 1
+        width: calc(50% - 112px)
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: flex-start
+        align-items: center
+        padding-left: 112px
+      @include media-breakpoint-up(xxl)
+        width: calc(50% - 129px)
+        padding-left: 129px
       .social
         &-list
           display: flex
-          justify-content: space-between
-          width: 280px
-        &-item
-          width: 26px
-          height: 26px
+          @include media-breakpoint-down(sm)
+            width: 140px
           @include media-breakpoint-up(md)
+            order: 1
+          @include media-breakpoint-up(xl)
+            display: inline-flex
+            order: 3
+        &-item
+          width: 20px
+          height: 20px
+          margin-right: 30px
+          @include media-breakpoint-up(md)
+            width: 28px
+            height: 28px
+          @include media-breakpoint-up(xxl)
             width: 40px
             height: 40px
         &-link
           .img
             width: 100%
             height: 100%
+      .contact
+        &-list
+          display: none
+          @include media-breakpoint-up(md)
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+            height: 100%
+            order: 2
+          @include media-breakpoint-up(xl)
+            order: 1
+            width: 100%
+            flex-direction: row
+            justify-content: flex-start
+            flex-wrap: wrap
+            height: auto
+        &-item
+          @include media-breakpoint-up(md)
+            .phone
+              margin-bottom: 7px
+            .city
+              font-size: 12px
+              line-height: 15px
+              letter-spacing: .08em
+              color: $black50
+              text-transform: uppercase
+              max-width: 170px
+          @include media-breakpoint-up(xl)
+            margin-right: 53px
+            margin-bottom: 32px
+          @include media-breakpoint-up(xl)
+            margin-right: 86px
       .copyright
         color: $blue
         @include media-breakpoint-down(sm)
-          font-size: 12px
-          line-height: 18px
+          font-size: 11px
+          line-height: 16px
+          width: 140px
+        @include media-breakpoint-up(md)
+          order: 3
+        @include media-breakpoint-up(xl)
+          display: inline-flex
+          order: 2
+          margin-right: 45px
 
     .right-side
       display: flex
+      justify-content: center
+      margin-bottom: 25px
       @include media-breakpoint-up(md)
         width: 50%
         flex-wrap: wrap
-        @include media-breakpoint-up(xl)
-          width: 754px
-          flex-wrap: nowrap
+        justify-content: flex-start
+        margin-bottom: 0
+      @include media-breakpoint-up(xl)
+        width: 754px
+        flex-wrap: nowrap
+        justify-content: space-between;
       .wrapper
-        &-main, &-expertise
-          @include media-breakpoint-down(sm)
-            display: none
+        &-main, &-blog
           @include media-breakpoint-up(md)
             width: 50%
             margin-bottom: 40px
           @include media-breakpoint-up(xl)
             width: 194px
+            margin-bottom: 0
           @include media-breakpoint-up(xxl)
             width: 228px
+        &-main
+          @include media-breakpoint-down(sm)
+            display: none
+        &-blog
+          @include media-breakpoint-down(sm)
+            width: 140px
+            .footer-heading
+              min-height: 40px
+            .item
+              &:nth-last-child(-n+2)
+                display: none
         &-info
           @include media-breakpoint-down(sm)
-            position: absolute
-            top: 50px
-            left: 50%
-            width: 100%
-            text-align: center
-            transform: translateX(-50%)
+            width: 140px
+            .item
+              &:last-child
+                display: none
           @include media-breakpoint-up(xl)
             width: 306px
           @include media-breakpoint-up(xxl)
             width: 357px
 
+      .footer-heading
+        color: $blue
+        margin-bottom: 10px
       .list
         list-style: none
         padding: 0
-        @include media-breakpoint-up(md)
-          margin-bottom: 0
+        margin: 0
       .item
-        margin-bottom: 8px
         @include media-breakpoint-up(md)
-          margin-bottom: 12px
-        &:last-child
-          margin-bottom: 0
+          &:not(:last-child)
+            margin-bottom: 12px
       .link
         text-decoration: none
         font-size: 12px
