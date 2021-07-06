@@ -2512,11 +2512,14 @@ p {
             white-space: nowrap;
             margin-left: 0; } }
         .modal .modal__content .desc .subheading .price {
+          display: inline-block;
           font-size: 14px;
-          line-height: 21px;
+          line-height: 1;
           letter-spacing: .01em;
           font-weight: bold;
-          color: #000000; }
+          color: #000000;
+          border-bottom: 2px solid #FFC72B;
+          margin-bottom: 6px; }
           @media (min-width: 768px) {
             .modal .modal__content .desc .subheading .price {
               font-size: 21px;
@@ -3660,7 +3663,7 @@ p {
 @media (min-width: 1440px) {
   .card__right .price {
     width: 50%;
-    margin-right: 30px; } }
+    margin-right: 32px; } }
 
 @media (min-width: 1440px) {
   .card__right .price-wrapper {
@@ -3730,7 +3733,13 @@ p {
     .card__right .change-price {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
-              order: 2; } }
+              order: 2;
+      margin-bottom: 0; } }
+
+@media (min-width: 1440px) {
+  .card__right .reserved {
+    width: 50%;
+    margin-right: 32px; } }
 
 .card__right .btn {
   display: -webkit-box;
@@ -3750,7 +3759,7 @@ p {
               order: 1;
       padding: 18px 43px;
       margin-right: 32px;
-      margin-bottom: 36px; } }
+      margin-bottom: 0; } }
   @media (min-width: 1920px) {
     .card__right .btn {
       padding: 18px 51px; } }
@@ -3761,11 +3770,13 @@ p {
       display: flex;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+      margin-bottom: 36px; } }
 
 .card__right .question {
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  color: #0D2951; }
   @media (min-width: 768px) {
     .card__right .question {
       text-align: left;

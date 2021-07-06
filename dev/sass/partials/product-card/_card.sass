@@ -127,7 +127,7 @@
     .price
       @include media-breakpoint-up(xl)
         width: 50%
-        margin-right: 30px
+        margin-right: 32px
       &-wrapper
         @include media-breakpoint-up(xl)
           display: flex
@@ -178,6 +178,11 @@
         text-align: left
       @include media-breakpoint-up(xl)
         order: 2
+        margin-bottom: 0
+    .reserved
+      @include media-breakpoint-up(xl)
+        width: 50%
+        margin-right: 32px
     .btn
       display: flex
       margin-left: auto
@@ -190,16 +195,18 @@
         order: 1
         padding: 18px 43px
         margin-right: 32px
-        margin-bottom: 36px
+        margin-bottom: 0
       @include media-breakpoint-up(xxl)
         padding: 18px 51px
       &-group
         @include media-breakpoint-up(xl)
           display: flex
           align-items: center
+          margin-bottom: 36px
     .question
       text-align: center
       margin-bottom: 20px
+      color: $blue
       @include media-breakpoint-up(md)
         text-align: left
         margin-bottom: 30px

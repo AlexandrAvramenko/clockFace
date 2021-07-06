@@ -6,6 +6,7 @@ include ../../mixins/breadcrumbs
 	const
 		breadcrumbs = [{title: 'Главная', link: '/'}, {title: 'Купить часы', link: '/'}, {title: 'Последние поступления'}]
 		gallery = ['adriatica.png', 'adriatica-2.png', 'adriatica-3.png', 'adriatica.png', 'adriatica-2.png',]
+	const reserved = false
 
 section.card
 	.card__wrapper
@@ -44,7 +45,10 @@ section.card
 						.recommended Рекомендуемая цена: ₽ 2 300 000
 					.btn-group
 						a.change-price(href="/") Сообщить об изменении цены
-						+button('btn-secondary btn-lg open-modal', 'Зарезервировать')
+						if reserved
+							h6.normal.reserved Зарезервированы
+						else
+							+button('btn-secondary btn-lg open-modal', 'Зарезервировать')
 					h6.normal.question Хотите продать свои часы?
 					a.connect(href="/") #[img.icon(src="./img/phone.svg", alt="icon")] Задать вопрос
 
