@@ -100,11 +100,12 @@
 					letter-spacing: .01em
 					font-weight: bold
 					color: $black
-					border-bottom: 2px solid $yellow
-					margin-bottom: 6px
+					&.underline
+						border-bottom: 2px solid $yellow
+						margin-bottom: 6px
 					@include media-breakpoint-up(md)
 						font-size: 21px
-						line-height: 31px
+						line-height: 1
 					&-wrapper
 						height: 40px
 						margin-top: auto
@@ -163,13 +164,3 @@
 	.protection
 		@include media-breakpoint-down(sm)
 			display: none
-
-.overlay
-	z-index: 1190
-	position: fixed
-	background: transparent
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	display: none

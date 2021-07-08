@@ -2517,13 +2517,14 @@ p {
           line-height: 1;
           letter-spacing: .01em;
           font-weight: bold;
-          color: #000000;
-          border-bottom: 2px solid #FFC72B;
-          margin-bottom: 6px; }
+          color: #000000; }
+          .modal .modal__content .desc .subheading .price.underline {
+            border-bottom: 2px solid #FFC72B;
+            margin-bottom: 6px; }
           @media (min-width: 768px) {
             .modal .modal__content .desc .subheading .price {
               font-size: 21px;
-              line-height: 31px; } }
+              line-height: 1; } }
           .modal .modal__content .desc .subheading .price-wrapper {
             height: 40px;
             margin-top: auto; }
@@ -2594,16 +2595,6 @@ p {
   @media (max-width: 767.98px) {
     .modal .protection {
       display: none; } }
-
-.overlay {
-  z-index: 1190;
-  position: fixed;
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: none; }
 
 @media (min-width: 1440px) {
   .baners {
