@@ -14,20 +14,16 @@
       @include media-breakpoint-up(xl)
         display: block
         width: 50%
-      .breadcrumbs
-        @include media-breakpoint-up(xl)
-          position: absolute
-          top: -50px
-      .image
-        width: 100%
-        height: 100%
         background-image: url(./../img/bg-rate-watch.png)
         background-repeat: no-repeat
         background-position: 50% 100%
         background-size: cover
+        padding: 76px 0 76px calc((100vw - 100%) / 2)
+        margin: -76px 0 -76px calc((100vw - 100%) / -2)
+      .breadcrumbs
         @include media-breakpoint-up(xl)
-          padding: 76px 0 76px calc((100vw - 100%) / 2)
-          margin: -76px 0 -76px calc((100vw - 100%) / -2)
+          position: absolute
+          top: 10px
     .right-side
       width: 100%
       max-width: 446px
