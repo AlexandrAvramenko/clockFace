@@ -32,11 +32,18 @@
         &-wrapper
           display: none
           height: 32px
+          cursor: pointer
+          color: unset
+          text-decoration: none
           @include media-breakpoint-up(xl)
             position: absolute
             &.like,&.liked
               top: 0
               left: 0
+            &.liked
+              top: 0
+              left: 0
+              cursor: default
             &.compare
               top: 40px
               left: 0
@@ -59,6 +66,11 @@
                 margin-bottom: 6px
                 .tooltip
                   display: block
+                  font-size: 13px
+                  line-height: 20px
+                  letter-spacing: .08em
+                  text-transform: uppercase
+                  color: $blue
                   margin-left: 4px
 
             &.docs,&.pack

@@ -206,12 +206,14 @@
     .question
       text-align: center
       margin-bottom: 20px
-      color: $blue
       @include media-breakpoint-up(md)
         text-align: left
         margin-bottom: 30px
       @include media-breakpoint-up(xl)
         margin-bottom: 40px
+      .link
+        color: $blue
+        text-decoration: none
     .connect
       display: flex
       justify-content: center

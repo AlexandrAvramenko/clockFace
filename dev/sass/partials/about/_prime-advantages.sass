@@ -21,8 +21,12 @@
         left: 0
         top: 0
         right: 0
-        height: 97px
+        height: 50px
         background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        @include media-breakpoint-up(md)
+          height: 70px
+        @include media-breakpoint-up(xl)
+          height: 97px
       @include media-breakpoint-up(md)
         height: 220px
       @include media-breakpoint-up(xl)

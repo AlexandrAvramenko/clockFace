@@ -2,16 +2,17 @@ mixin product(data, slider)
 	each item in data
 		div(class= slider ? 'slide product' : 'product')
 			.img-wrapper
-				img.img(src='./img/' + item.img, alt="img")
+				a.product-link(href="/product-card")
+					img.img(src='./img/' + item.img, alt="img")
 				if item.like
-					.icon-wrapper.like
+					a.icon-wrapper.like(href="/like")
 						img.icon(src='./img/' + item.like, alt="icon")
 						.tooltip В избранное
 				if item.liked
 					.icon-wrapper.liked
 						img.icon(src='./img/' + item.liked, alt="icon")
 				if item.compare
-					.icon-wrapper.compare
+					a.icon-wrapper.compare(href="/compare")
 						img.icon(src='./img/' + item.compare, alt="icon")
 						.tooltip Сравнить
 				if item.docs
