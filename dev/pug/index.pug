@@ -2,6 +2,7 @@ extends layouts/main
 
 block append variables
 	- const title = 'Main page'
+	- const reviewsBg = true
 
 block content
 	include includes/main-page/first-screen
@@ -9,7 +10,7 @@ block content
 	include includes/best-deals
 	include includes/main-page/collections
 	include includes/advantages
-	include includes/main-page/reviews
+	include includes/reviews
 	include includes/main-page/blog
 	include includes/main-page/ratings
 	include includes/main-page/about-watch
