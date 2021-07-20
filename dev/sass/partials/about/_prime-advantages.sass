@@ -1,4 +1,16 @@
 .prime-advantages
+  &__wrapper
+    @include media-breakpoint-up(md)
+      background: url(../../img/bg-prime-bottom.svg), url(../../img/bg-prime-top.svg)
+      background-position: -10.75% calc(100% - 50px), 111.74% 244px
+      background-size: 186px, 200px
+      background-repeat: no-repeat
+    @include media-breakpoint-up(xl)
+      background-position: -6.25% calc(100% - 70px), 108.19% 363px
+      background-size: 307px, 324px
+    @include media-breakpoint-up(xxl)
+      background-position: 2.71% calc(100% - 90px), 98.59% 363px
+      background-size: 307px, 324px
   &__heading
     text-align: center
     color: $white
@@ -32,16 +44,27 @@
       @include media-breakpoint-up(xl)
         height: 300px
   &__content
+    @include media-breakpoint-up(md)
+      max-width: 562px
+      margin-left: auto
+      margin-right: auto
+    @include media-breakpoint-up(xl)
+      max-width: 866px
+    @include media-breakpoint-up(xxl)
+      max-width: 1002px
     .block
       padding: 40px 16px
       @include media-breakpoint-up(md)
         padding: 50px 60px
       @include media-breakpoint-up(xl)
         padding: 70px 114px
-      &:nth-child(2)
-        background: #deb2b2
       .heading
         color: $blue
         margin-bottom: 20px
         @include media-breakpoint-up(md)
           margin-bottom: 30px
+      &-bg
+        background: url(../../img/bg-prime-tab.png) 50% 50% no-repeat
+        background-size: cover
+        @include media-breakpoint-up(xl)
+          background: url(../../img/bg-prime-desc.png) 50% 50% no-repeat
