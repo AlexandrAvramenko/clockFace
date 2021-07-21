@@ -1,0 +1,23 @@
+-
+	const documentsData = [
+		{url: 'docs-exam-vert.png', orientation: "vertical"},
+		{url: 'docs-exam-vert.png', orientation: "vertical"},
+		{url: 'docs-exam-hor.png', orientation: "horizontal"},
+		{url: 'docs-exam-vert.png', orientation: "vertical"},
+		{url: 'docs-exam-vert.png', orientation: "vertical"},
+	]
+
+section.documents
+	.documents__wrapper
+		.container
+			h3.documents__heading.normal Документы и Свидетельства
+			.documents__content
+				.slider-documents
+					each item in documentsData
+						.slide
+							.img-wrapper(class=item.orientation)
+								img.img(src='./img/' + item.url, alt="img")
+				.static-gallery
+					each item in documentsData
+						.img-wrapper(class=item.orientation)
+								img.img(src='./img/' + item.url, alt="img")

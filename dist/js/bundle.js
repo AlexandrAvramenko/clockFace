@@ -113,7 +113,17 @@ $(".slider-card").slick({
   ],
 });
 
-// btn-up
+$(".slider-documents").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplaySpeed: 2000,
+  prevArrow: "<img src='./img/arrow-left.svg' class='prev' alt='prev'>",
+  nextArrow: "<img src='./img/arrow-right.svg' class='next' alt='next'>",
+  adaptiveHeight: true
+});
+
+// btn-ups
 $(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > $(this).height() * 0.5) {
