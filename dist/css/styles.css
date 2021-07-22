@@ -4324,7 +4324,7 @@ p {
 
 @media (min-width: 768px) {
   .prime-advantages__wrapper {
-    background: url(../../img/bg-prime-bottom.svg), url(../../img/bg-prime-top.svg);
+    background: url(./../img/bg-prime-bottom.svg), url(../../img/bg-prime-top.svg);
     background-position: -10.75% calc(100% - 50px), 111.74% 244px;
     background-size: 186px, 200px;
     background-repeat: no-repeat; } }
@@ -4359,7 +4359,7 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: url(../../img/bg-about.png) 50% 50% no-repeat;
+    background: url(./../img/bg-about.png) 50% 50% no-repeat;
     background-size: cover;
     height: 140px; }
     .prime-advantages__heading-wrapper::after {
@@ -4414,11 +4414,11 @@ p {
       .prime-advantages__content .block .heading {
         margin-bottom: 30px; } }
   .prime-advantages__content .block-bg {
-    background: url(../../img/bg-prime-tab.png) 50% 50% no-repeat;
+    background: url(./../img/bg-prime-tab.png) 50% 50% no-repeat;
     background-size: cover; }
     @media (min-width: 1440px) {
       .prime-advantages__content .block-bg {
-        background: url(../../img/bg-prime-desc.png) 50% 50% no-repeat; } }
+        background: url(./../img/bg-prime-desc.png) 50% 50% no-repeat; } }
 
 .contact-us__wrapper {
   background: #62748E; }
@@ -4660,6 +4660,46 @@ p {
     .all-brands__letter {
       font-size: 29px;
       line-height: 39px; } }
+
+.contacts__heading {
+  text-align: center;
+  color: #0D2951; }
+  .contacts__heading-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url(../../img/bg-contacts.png) 50% 50% no-repeat;
+    background-size: cover;
+    height: 140px; }
+    .contacts__heading-wrapper::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 50px;
+      background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#FFFFFF));
+      background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%); }
+      @media (min-width: 768px) {
+        .contacts__heading-wrapper::after {
+          height: 70px; } }
+      @media (min-width: 1440px) {
+        .contacts__heading-wrapper::after {
+          height: 97px; } }
+    @media (min-width: 768px) {
+      .contacts__heading-wrapper {
+        height: 220px; } }
+    @media (min-width: 1440px) {
+      .contacts__heading-wrapper {
+        height: 300px; } }
 
 .info-block__wrapper {
   padding: 40px 20px; }

@@ -1,0 +1,33 @@
+.contacts
+  &__heading
+    text-align: center
+    color: $blue
+    // padding: 0 16px
+    // @include media-breakpoint-up(xl)
+    //   font-size: 86px
+    //   line-height: 105px
+    //   letter-spacing: .05em
+    &-wrapper
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      background: url(../../img/bg-contacts.png) 50% 50% no-repeat
+      background-size: cover
+      height: 140px
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        height: 50px
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+        @include media-breakpoint-up(md)
+          height: 70px
+        @include media-breakpoint-up(xl)
+          height: 97px
+      @include media-breakpoint-up(md)
+        height: 220px
+      @include media-breakpoint-up(xl)
+        height: 300px
