@@ -1735,8 +1735,10 @@ p {
                 background: none;
                 padding-left: 0;
                 margin: 0; } }
-            .header__menu-mobile .menu-mobile__left .list .mobile-dropdown__content .item {
+            .header__menu-mobile .menu-mobile__left .list .mobile-dropdown__content .list .item {
               padding-bottom: 18px; }
+            .header__menu-mobile .menu-mobile__left .list .mobile-dropdown__content .list.about .item:nth-child(2) {
+              white-space: nowrap; }
         @media (min-width: 768px) {
           .header__menu-mobile .menu-mobile__left .list .item {
             width: 25%; } }

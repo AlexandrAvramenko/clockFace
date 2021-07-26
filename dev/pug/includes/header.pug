@@ -16,11 +16,9 @@ include ../mixins/button
 			{title: 'Золотые монеты', link: '/'}
 		]
 		aboutus_list = [
-			{title: 'Услуги', link: '/'},
-			{title: 'Сотрудничество', link: '/'},
-			{title: 'Почему мы', link: '/'},
-			{title: 'Аксессуары', link: '/'},
-			{title: 'Вопрос-Ответ', link: '/'},
+			{title: 'Контакты', link: '/'},
+			{title: 'О компании', link: '/'},
+			{title: 'Блог', link: '/'},
 			{title: 'Отзывы', link: '/'}
 		]
 		menu_small = [
@@ -159,7 +157,7 @@ section.header
 								.mobile-dropdown О нас
 									img.icon(src="./img/chevron.svg", alt="icon")
 								.mobile-dropdown__content
-									+list(aboutus_list, 'list', 'item', true, 'link')
+									+list(aboutus_list, 'list about', 'item', true, 'link')
 					.menu-mobile__right
 						.list
 							.item.lang
