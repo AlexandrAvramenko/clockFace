@@ -1,33 +1,137 @@
 .contacts
-  &__heading
-    text-align: center
-    color: $blue
-    // padding: 0 16px
-    // @include media-breakpoint-up(xl)
-    //   font-size: 86px
-    //   line-height: 105px
-    //   letter-spacing: .05em
-    &-wrapper
-      position: relative
-      display: flex
-      justify-content: center
-      align-items: center
-      background: url(../../img/bg-contacts.png) 50% 50% no-repeat
-      background-size: cover
-      height: 140px
-      &::after
-        content: ''
-        position: absolute
-        left: 0
-        top: 0
-        right: 0
-        height: 50px
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
-        @include media-breakpoint-up(md)
-          height: 70px
-        @include media-breakpoint-up(xl)
-          height: 97px
-      @include media-breakpoint-up(md)
-        height: 220px
-      @include media-breakpoint-up(xl)
-        height: 300px
+	&__heading
+		text-align: center
+		color: $blue
+		padding: 0 16px
+		@include media-breakpoint-up(xl)
+			font-size: 86px
+			line-height: 105px
+			letter-spacing: .05em
+		&-wrapper
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			background: url(../../img/bg-contacts.png) 50% 50% no-repeat
+			background-size: cover
+			height: 140px
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				height: 50px
+				background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+				@include media-breakpoint-up(md)
+					height: 70px
+				@include media-breakpoint-up(xl)
+					height: 97px
+			@include media-breakpoint-up(md)
+				height: 220px
+			@include media-breakpoint-up(xl)
+				height: 300px
+
+	&__content
+		.bg
+			&-light-grey
+				background: $lightGrey
+		.location
+			@include media-breakpoint-up(md)
+				display: flex
+				justify-content: space-between
+			@include media-breakpoint-up(xl)
+				justify-content: flex-start
+			.desc
+				padding: 40px 20px 0
+				margin-left: 49px
+				@include media-breakpoint-up(md)
+					margin-left: 39px
+				@include media-breakpoint-up(xl)
+					width: calc(50% - 100px)
+					margin-left: 100px
+				@include media-breakpoint-up(xxl)
+					margin-left: 112px
+				.top
+					font-size: 14px
+					line-height: 22px
+					@include media-breakpoint-up(md)
+						font-size: 17px
+						line-height: 25px
+					@include media-breakpoint-up(xl)
+						font-size: 21px
+						line-height: 28px
+					.title
+						margin-bottom: 20px
+						@include media-breakpoint-up(md)
+							font-size: 21px
+							line-height: 31px
+							letter-spacing: .01em
+							margin-bottom: 24px
+						@include media-breakpoint-up(xl)
+							font-size: 29px
+							line-height: 39px
+							letter-spacing: .01em
+							margin-bottom: 24px
+					.phone
+						display: flex
+						align-items: center
+						margin-bottom: 8px
+						.number
+							color: $blue
+							margin-left: 8px
+					.address
+						margin-bottom: 11px
+					.email
+						display: inline-block
+						color: $black
+						margin-bottom: 24px
+				.bottom
+					.schedule
+						font-size: 12px
+						line-height: 18px
+						letter-spacing: .06em
+						text-transform: uppercase
+						margin-bottom: 11px
+						@include media-breakpoint-up(md)
+							font-size: 12px
+							line-height: 23px
+							letter-spacing: .08em
+							margin-bottom: 10px
+						@include media-breakpoint-up(xl)
+							margin-bottom: 12px
+						span
+							display: block
+					.comment
+						font-size: 11px
+						line-height: 16px
+						max-width: 185px
+						margin-bottom: 29px
+						@include media-breakpoint-up(md)
+							font-size: 13px
+							line-height: 21px
+							max-width: 210px
+						@include media-breakpoint-up(xl)
+							font-size: 17px
+							line-height: 25px
+			.map-wrapper
+				padding: 0 20px 40px
+				@include media-breakpoint-up(md)
+					padding: 40px 0
+				@include media-breakpoint-up(xl)
+					width: 50%
+				#map-1, #map-2
+					width: 100%
+					height: 182px
+					margin: auto
+					@include media-breakpoint-up(md)
+						width: 330px
+						height: 330px
+					@include media-breakpoint-up(xl)
+						width: 532px
+						height: 363px
+					@include media-breakpoint-up(xxl)
+						width: 616px
+				#map-2
+					@include media-breakpoint-up(md)
+						height: 366px

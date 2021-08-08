@@ -246,3 +246,32 @@ $("#slider-range").slider({
     $("#max_price").val(ui.values[1]);
   },
 });
+
+//maps
+function initMap() {
+  const position1 = { lat: 55.771345260087486, lng: 37.62279636530492 };
+  const map1 = new google.maps.Map(document.getElementById("map-1"), {
+    center: position1,
+    zoom: 14,
+    mapId: "c2cc7820e9334a3c"
+  });
+
+  const marker1 = new google.maps.Marker({
+    position: position1,
+    map: map1,
+    icon: "./img/marker.svg"
+  });
+
+  const position2 = { lat: 55.771345260087486, lng: 37.62279636530492 };
+  const map2 = new google.maps.Map(document.getElementById("map-2"), {
+    center: position2,
+    zoom: 14,
+    mapId: "c2cc7820e9334a3c"
+  });
+
+  const marker2 = new google.maps.Marker({
+    position: position2,
+    map: map2,
+    icon: "./img/marker.svg"
+  });
+}
