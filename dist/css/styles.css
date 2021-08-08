@@ -4727,6 +4727,16 @@ p {
         -ms-flex-pack: start;
             justify-content: flex-start; } }
 
+.contacts__content .location:last-child .desc:last-child {
+  padding-bottom: 40px; }
+  @media (min-width: 768px) {
+    .contacts__content .location:last-child .desc:last-child {
+      white-space: nowrap;
+      padding-right: 0; } }
+  @media (min-width: 1440px) {
+    .contacts__content .location:last-child .desc:last-child {
+      margin-left: 20px; } }
+
 .contacts__content .location .desc {
   padding: 40px 20px 0;
   margin-left: 49px; }
