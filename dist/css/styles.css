@@ -1997,13 +1997,24 @@ p {
       .catalog__heading-wrapper {
         height: 300px; } }
 
+@media (min-width: 1440px) {
+  .catalog__content {
+    width: 1040px; } }
+
+@media (min-width: 1920px) {
+  .catalog__content {
+    width: 1136px; } }
+
 .catalog__content-wrapper {
   position: relative; }
   @media (min-width: 1440px) {
     .catalog__content-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 @media (min-width: 768px) {
   .catalog__aside {
@@ -2014,10 +2025,7 @@ p {
 @media (min-width: 1440px) {
   .catalog__aside {
     position: static;
-    margin-right: 55px; } }
-
-@media (min-width: 1920px) {
-  .catalog__aside {
+    width: 225px;
     margin-right: auto; } }
 
 .accordion__heading {

@@ -31,10 +31,16 @@
         height: 220px
       @include media-breakpoint-up(xl)
         height: 300px
-  &__content-wrapper
-    position: relative
+  &__content
     @include media-breakpoint-up(xl)
-      display: flex
+      width: 1040px
+    @include media-breakpoint-up(xxl)
+      width: 1136px
+    &-wrapper
+      position: relative
+      @include media-breakpoint-up(xl)
+        display: flex
+        justify-content: space-between
   &__aside
     @include media-breakpoint-up(md)
       position: absolute
@@ -42,6 +48,5 @@
       left: 0
     @include media-breakpoint-up(xl)
       position: static
-      margin-right: 55px
-    @include media-breakpoint-up(xxl)
+      width: 225px
       margin-right: auto
