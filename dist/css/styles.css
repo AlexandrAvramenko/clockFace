@@ -2446,11 +2446,12 @@ p {
   padding: 50px 20px 15px; }
   @media (min-width: 768px) {
     .modal {
-      width: 768px;
+      width: 678px;
       padding: 60px 45px 30px; } }
   @media (min-width: 1440px) {
     .modal {
-      width: 1440px; } }
+      width: 1440px;
+      padding: 60px 0 30px; } }
   .modal .close-modal {
     position: absolute;
     right: 20px;
