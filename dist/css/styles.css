@@ -3973,7 +3973,9 @@ p {
         line-height: 21px;
         width: 100%;
         padding: 12px 40px;
-        margin-top: 15px; } }
+        margin-top: 16px; }
+        .filters .btn-wrapper .btn.btn-secondary {
+          margin-top: 24px; } }
 
 @media (min-width: 768px) {
   .sort__content {
