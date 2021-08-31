@@ -44,14 +44,14 @@ section.card
 										img(src="./img/evro.svg", alt="icon")
 						.recommended Рекомендуемая цена: ₽ 2 300 000
 					.btn-group
-						a.change-price(href="/") Сообщить об изменении цены
+						.change-price.open-modal-2 Сообщить об изменении цены
 						if reserved
 							h6.normal.reserved Зарезервированы
 						else
-							+button('btn-secondary btn-lg open-modal', 'Зарезервировать')
+							+button('btn-secondary btn-lg open-modal-1', 'Зарезервировать')
 					h6.normal.question Хотите продать свои часы?
 					a.connect(href="/") #[img.icon(src="./img/phone.svg", alt="icon")] Задать вопрос
 
 +modal('reserve')
-//- +modal('price-changes')
++modal('price-changes')
 

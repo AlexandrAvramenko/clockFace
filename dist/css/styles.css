@@ -2251,6 +2251,7 @@ p {
           -ms-flex-pack: center;
               justify-content: center;
       width: 188px;
+      height: calc(100% - 155px);
       margin: auto; }
       @media (min-width: 768px) {
         .product .img-wrapper {
@@ -2285,10 +2286,10 @@ p {
                 left: 0; }
               .product .img-wrapper .icon-wrapper.docs {
                 left: 0;
-                bottom: 40px; }
+                bottom: 80px; }
               .product .img-wrapper .icon-wrapper.pack {
                 left: 0;
-                bottom: 0; }
+                bottom: 40px; }
               .product .img-wrapper .icon-wrapper.like:hover, .product .img-wrapper .icon-wrapper.compare:hover {
                 display: -webkit-box;
                 display: -ms-flexbox;
@@ -3660,6 +3661,8 @@ p {
   line-height: 17px;
   color: #808080;
   text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
   margin-bottom: 30px; }
   @media (min-width: 768px) {
     .card__right .change-price {

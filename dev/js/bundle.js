@@ -192,8 +192,11 @@ $(".filters__heading").click(function () {
 });
 
 // modal
-$(".open-modal").click(function () {
-  $(".modal, .overlay").show();
+$(".open-modal-1").click(function () {
+  $(".modal.reserve, .overlay").show();
+});
+$(".open-modal-2").click(function () {
+  $(".modal.price-changes, .overlay").show();
 });
 $(".overlay, .close-modal").click(function () {
   $(".modal, .overlay").hide();
