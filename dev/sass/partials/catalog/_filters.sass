@@ -108,7 +108,7 @@
     display: flex
     justify-content: space-between
     @include media-breakpoint-up(xl)
-      padding: 0 28px
+      flex-direction: column-reverse
     .btn
       width: 132px
       @include media-breakpoint-up(md)
@@ -116,13 +116,9 @@
         line-height: 20px
         width: auto
         padding: 7px 16px
-      &.btn-secondary
-        @include media-breakpoint-up(xl)
-          font-size: 17px
-          line-height: 21px
-          width: 100%
-          padding: 12px 40px
-          margin-top: 15px
-      &.btn-primary
-        @include media-breakpoint-up(xl)
-          display: none
+      @include media-breakpoint-up(xl)
+        font-size: 17px
+        line-height: 21px
+        width: 100%
+        padding: 12px 40px
+        margin-top: 15px

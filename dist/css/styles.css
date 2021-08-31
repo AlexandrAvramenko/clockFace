@@ -3955,7 +3955,10 @@ p {
           justify-content: space-between; }
   @media (min-width: 1440px) {
     .filters .btn-wrapper {
-      padding: 0 28px; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
   .filters .btn-wrapper .btn {
     width: 132px; }
     @media (min-width: 768px) {
@@ -3965,15 +3968,12 @@ p {
         width: auto;
         padding: 7px 16px; } }
     @media (min-width: 1440px) {
-      .filters .btn-wrapper .btn.btn-secondary {
+      .filters .btn-wrapper .btn {
         font-size: 17px;
         line-height: 21px;
         width: 100%;
         padding: 12px 40px;
         margin-top: 15px; } }
-    @media (min-width: 1440px) {
-      .filters .btn-wrapper .btn.btn-primary {
-        display: none; } }
 
 @media (min-width: 768px) {
   .sort__content {

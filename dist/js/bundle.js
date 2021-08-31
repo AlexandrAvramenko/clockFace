@@ -191,10 +191,6 @@ $(".filters__heading").click(function () {
   $(this).next().slideToggle(300);
 });
 
-$(".filters__close").click(function () {
-  $(".filters__content").slideUp(300);
-});
-
 // modal
 $(".open-modal").click(function () {
   $(".modal, .overlay").show();
