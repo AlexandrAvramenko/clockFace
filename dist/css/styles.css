@@ -4207,7 +4207,7 @@ p {
       .products__list .product .img-wrapper {
         width: 100%; }
 
-.products .btn {
+.pagination .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
