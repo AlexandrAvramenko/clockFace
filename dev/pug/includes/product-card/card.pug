@@ -5,7 +5,7 @@ include ../../mixins/breadcrumbs
 -
 	const
 		breadcrumbs = [{title: 'Главная', link: '/'}, {title: 'Купить часы', link: '/'}, {title: 'Последние поступления'}]
-		gallery = ['adriatica.png', 'adriatica-2.png', 'adriatica-3.png', 'adriatica.png', 'adriatica-2.png',]
+		gallery = ['adriatica.png', 'adriatica-2.png', 'adriatica-3.png', 'breitling.jpeg', 'adriatica-2.png',]
 	const reserved = false
 
 section.card
@@ -19,8 +19,9 @@ section.card
 							.slider-card
 								each item in gallery
 									.slide
-										img.icon.icon-like(src='./img/like.svg', alt="icon")
-										img.img(src='./img/' + item, alt="img")
+										.img-wrapper
+											img.icon.icon-like(src='./img/like.svg', alt="icon")
+											img.img(src='./img/' + item, alt="img")
 							.dots
 								each item in gallery
 									.dot

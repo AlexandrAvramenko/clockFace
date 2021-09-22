@@ -98,19 +98,9 @@ $(".slider-card").slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplaySpeed: 2000,
   prevArrow: "<img src='./img/arrow-left.svg' class='prev' alt='prev'>",
   nextArrow: "<img src='./img/arrow-right.svg' class='next' alt='next'>",
   dots: true,
-  responsive: [
-    {
-      breakpoint: 1440,
-      settings: {
-        prevArrow: false,
-        nextArrow: false,
-      },
-    },
-  ],
 });
 
 $(".slider-documents").slick({

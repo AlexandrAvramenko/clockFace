@@ -15,6 +15,12 @@
   right: 0
 .slick-dots
   bottom: -45px
+  left: 50%
+  width: auto
+  white-space: nowrap;
+  transform: translateX(-50%)
+  @include media-breakpoint-up(xl)
+    transform: unset
   li
     width: 15px
     height: 15px

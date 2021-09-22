@@ -24,20 +24,33 @@
     .breadcrumbs
       @include media-breakpoint-up(md)
         margin-top: -36px
-        margin-bottom: 80px
       @include media-breakpoint-up(xl)
         margin-top: 0
         margin-bottom: 48px
+    .gallery
+      height: 100%
     .slider-wrapper
+      height: 100%
       margin-bottom: 67px
+      @include media-breakpoint-up(md)
+        height: calc(100% - 45px)
       @include media-breakpoint-up(xl)
         margin-left: 130px
+        margin-bottom: 46px
+      .slider-card
+        .prev,.next
+          opacity: 0;
+          @include media-breakpoint-up(xl)
+            opacity: 1;
       .slide
         position: relative
         display: flex
         justify-content: center
+        align-items: center
         .img
-          width: 330px
+          width: 100%
+          &-wrapper
+            width: 330px
         .icon
           display: none
           @include media-breakpoint-up(xl)
@@ -63,6 +76,13 @@
               height: 78px
               &:before
                 opacity: 0
+      .slick-track
+        display: flex
+        align-items: center
+      .slick-slider, .slick-list, .slick-track
+        height: 100%
+        margin: 0
+
       .dots
         display: none
         @include media-breakpoint-up(xl)
